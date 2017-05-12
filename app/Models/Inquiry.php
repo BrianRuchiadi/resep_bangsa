@@ -9,7 +9,7 @@ class Inquiry extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0907_inquiry';
+    public $table = 't0903_inquiry';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class Inquiry extends Model
      * @var array
      */
     protected $fillable = [
-    	'email', 'description', 'seen',
+    	'inquired_by', 'description', 'is_read'
     ];
 }

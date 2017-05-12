@@ -9,7 +9,7 @@ class LogUpdate extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0906_log_update';
+    public $table = 't0905_log_update';
     public $timestamps = true;
 
     /**
@@ -18,11 +18,6 @@ class LogUpdate extends Model
      * @var array
      */
     protected $fillable = [
-    	'user_type',
-        'user_id',
-        'table_name',
-        'table_id',
-        'content_from',
-        'content_to'
+    	'user_type', 'user_id', 'user_email', 'table_name', 'table_id', 'content_from', 'content_to'
     ];
 }

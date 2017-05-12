@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class DesignerPointTransaction extends Model
+class FoodTasteHistory extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0201_designer_point_transaction';
+    public $table = 't0510_food_like_history';
     public $timestamps = true;
 
     /**
@@ -18,11 +18,11 @@ class DesignerPointTransaction extends Model
      * @var array
      */
     protected $fillable = [
-    	'user_designer_id',
-        'type',
-        'point',
-        'sale_transaction_id',
-        'description',
-        'transacted_at'
+    	'food_id',
+        'liked_by',
+        'spicy',
+        'sour',
+        'sweet',
+        'bitter',
     ];
 }

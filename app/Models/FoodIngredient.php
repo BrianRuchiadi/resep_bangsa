@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class ClothingPrintDimension extends Model
+class FoodIngredient extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0503_clothing_print_dimension';
+    public $table = 't0504_food_ingredient';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class ClothingPrintDimension extends Model
      * @var array
      */
     protected $fillable = [
-    	'code_name', 'display_name', 'length', 'width'
+    	'food_id', 'ingredient_id'
     ];
 }

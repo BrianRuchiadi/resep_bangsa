@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class ClothingIncomeTransactionBf extends Model
+class FoodRecipeLike extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0705_clothing_income_transaction_bf';
+    public $table = 't0606_food_recipe_like';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class ClothingIncomeTransactionBf extends Model
      * @var array
      */
     protected $fillable = [
-    	'bf_at', 'currency', 'amount'
+    	'food_recipe_id', 'amount'
     ];
 }

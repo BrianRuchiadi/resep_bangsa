@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class ClothingPageView extends Model
+class FoodOverview extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0604_clothing_page_view';
+    public $table = 't0502_food_overview';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,14 @@ class ClothingPageView extends Model
      * @var array
      */
     protected $fillable = [
-    	'clothing_product_id', 'page_view', 'last_update'
+    	'food_id',
+        'overview_1_header',
+        'overview_2_header',
+        'overview_3_header',
+        'overview_4_header',
+        'overview_1',
+        'overview_2',
+        'overview_3',
+        'overview_4'
     ];
 }

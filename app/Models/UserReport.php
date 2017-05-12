@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class UserDesigner extends Model
+class UserReport extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0112_user_designer';
+    public $table = 't0901_user_report';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class UserDesigner extends Model
      * @var array
      */
     protected $fillable = [
-    	'user_id', 'designer_class_id', 'current_point', 'accumulated_point', 'profile_picture', 'is_activated'
+    	'report_type_id', 'reported_by', 'description', 'is_read'
     ];
 }

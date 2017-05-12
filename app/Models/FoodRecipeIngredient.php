@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class PasswordResetsAdmin extends Model
+class FoodRecipeIngredient extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0901_password_resets_admin';
+    public $table = 't0604_food_recipe_ingredient';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class PasswordResetsAdmin extends Model
      * @var array
      */
     protected $fillable = [
-    	'email', 'token'
+    	'food_recipe_id', 'ingredient_id'
     ];
 }

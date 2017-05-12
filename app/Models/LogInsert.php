@@ -9,7 +9,7 @@ class LogInsert extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0905_log_insert';
+    public $table = 't0904_log_insert';
     public $timestamps = true;
 
     /**
@@ -18,9 +18,6 @@ class LogInsert extends Model
      * @var array
      */
     protected $fillable = [
-    	'user_type',
-        'user_id',
-        'table_name',
-        'table_id'
+    	'user_type', 'user_id', 'user_email', 'table_name', 'table_id'
     ];
 }

@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class UserExternalId extends Model
+class Country extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0102_user_external_id';
+    public $table = 't0201_country';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class UserExternalId extends Model
      * @var array
      */
     protected $fillable = [
-    	'user_id', 'facebook', 'google'
+    	'name'
     ];
 }

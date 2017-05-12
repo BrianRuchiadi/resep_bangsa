@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class Notification extends Model
+class Nutrient extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0903_notification';
+    public $table = 't0507_nutrient';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class Notification extends Model
      * @var array
      */
     protected $fillable = [
-    	'type', 'notifiable_id', 'notifiable_type', 'data', 'read_at'
+    	'name', 'unit'
     ];
 }

@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class UserProfile extends Model
+class Ingredient extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0104_user_profile';
+    public $table = 't0401_ingredient';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class UserProfile extends Model
      * @var array
      */
     protected $fillable = [
-    	'user_id', 'fullname', 'gender', 'dob', 'contact_no', 'address', 'state', 'country'
+    	'name', 'picture', 'used_in', 'verified', 'is_active'
     ];
 }

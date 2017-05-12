@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class BugReport extends Model
+class FoodLikeHistory extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0908_bug_report';
+    public $table = 't0509_food_like_history';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class BugReport extends Model
      * @var array
      */
     protected $fillable = [
-    	'name', 'status_code', 'message' , 'status'
+    	'food_id', 'liked_by'
     ];
 }

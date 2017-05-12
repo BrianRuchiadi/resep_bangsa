@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Notifications\ResetPasswordNotification;
 
 class User extends Authenticatable
 {
     use Notifiable;
     use SoftDeletes;
 
-    public $table = 'users';
+    public $table = 't0101_user';
     public $timestamps = true;
 
     /**
@@ -20,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','alamat','user_type'
+        'username','email'
     ];
 
     /**
@@ -32,4 +33,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+        /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
 }

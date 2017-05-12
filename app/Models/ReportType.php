@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class ClothingColorVariant extends Model
+class ReportType extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0505_clothing_color_variant';
+    public $table = 't0902_report_type';
     public $timestamps = true;
 
     /**
@@ -18,6 +18,6 @@ class ClothingColorVariant extends Model
      * @var array
      */
     protected $fillable = [
-    	'name', 'color_1', 'color_2', 'color_3', 'color_4'
+    	'name', 'priority'
     ];
 }
