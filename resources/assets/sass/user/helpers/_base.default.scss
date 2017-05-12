@@ -1,0 +1,63 @@
+@import '../mixins';
+
+
+body .navbar-nav > li.topbar-profile > .dropdown-menu > li > a{
+	padding: 8px 10px 10px 10px;
+}
+
+@each $page in friends customers books sports setting{
+	body.#{$page} #sidebar-menu > ul > li.#{$page} > a{
+		background: #68C39F !important;
+	}
+}
+
+.amount{
+	font-weight: bold;
+	&.positive{ color:$color-font-positive ; }
+	&.negative{ color:$color-font-negative ; }
+}
+
+i.fa.button{ cursor: pointer; }
+
+.alert.alert-danger{ display: none; }
+.alert.alert-danger.error{ display: block; }
+.messages>span{ display: none; }
+@each $error in 
+	e-unexpected
+	e-api-not-found
+	system-maintenance
+
+	require-book
+	require-account
+	require-username
+	require-source
+	require-manual-login
+	require-book-name
+	require-description 
+	no-source-account
+	no-permission
+
+	invalid-access 
+	invalid-username
+	invalid-date
+	invalid-debit-credit
+
+	only-sub-account 
+	no-report-access 
+{
+	.alert.alert-danger.error.#{$error} .messages>span.#{$error}{
+			display: inline;
+	}
+}
+
+.messages .fa-2x{ vertical-align: middle; }
+		
+/********************** angular **********************/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .preloading {
+    > div:not(.load-container){
+      display: none !important;
+    }
+    > div.load-container{
+      display: table !important;
+    }
+}

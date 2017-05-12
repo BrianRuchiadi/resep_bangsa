@@ -1,0 +1,231 @@
+.list-icon-small {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: 2px;
+  padding-right: 5px;
+}
+
+.list-icon a {
+  display: inline-block;
+}
+
+#notification {
+  background-image: url(../../images/icomoon/16px/027-bullhorn.png);
+}
+
+#admin {
+  background-image: url(../../images/icomoon/16px/119-user-tie.png);
+}
+
+#user {
+  background-image: url(../../images/icomoon/16px/114-user.png);
+}
+
+#bug {
+  background-image: url(../../images/icomoon/16px/154-bug.png);
+}
+
+#mail {
+  background-image: url(../../images/icomoon/16px/389-mail2.png);
+}
+
+#page-stat {
+  background-image: url(../../images/icomoon/16px/157-stats-bars.png);
+}
+
+#sale {
+  background-image: url(../../images/icomoon/16px/156-stats-dots.png);
+}
+
+#page {
+  background-image: url(../../images/icomoon/16px/035-file-text.png);
+}
+
+#tag {
+  background-image: url(../../images/icomoon/16px/054-price-tag.png);
+}
+
+#redeem {
+  background-image: url(../../images/icomoon/16px/060-coin-dollar.png);
+}
+
+#transaction {
+  background-image: url(../../images/icomoon/16px/064-credit-card.png);
+}
+
+#product {
+  background-image: url(../../images/icomoon/16px/049-folder-open.png);
+}
+
+#designer {
+  background-image: url(../../images/icomoon/16px/011-eyedropper.png);
+}
+
+#logout {
+  background-image: url(../../images/icomoon/16px/277-exit.png);
+}
+
+.logout {
+  background-image: url(../../images/icomoon/32px/277-exit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.notification {
+  background-image: url(../../images/icomoon/32px/027-bullhorn.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+div, ul, li, ol {
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.white {
+  color: white;
+}
+
+.logo {
+  background-image: url(../../images/logo/logo.png);
+  background-size: 200px;
+  background-position-x: 35px;
+  background-position-y: -50px;
+  background-repeat: no-repeat;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #DBD0C5;
+}
+
+.panel {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left {
+  z-index: 2;
+  height: 1200px;
+  width: 25%;
+  background-color: #1A6D9B;
+  box-shadow: -1px 1px 20px 0px white;
+}
+
+.right {
+  width: 75%;
+  height: 1200px;
+}
+
+.small-panel {
+  display: inline-block;
+  height: 90px;
+}
+
+.small-panel.box {
+  width: 100%;
+  background-color: #DBD0C5;
+}
+
+.small-panel.box.plain {
+  margin-top: -4px;
+  border-top: 1px solid white;
+  vertical-align: top;
+  background-color: papayawhip;
+}
+
+.content-area {
+  display: inline-block;
+  margin-top: -4px;
+  height: 1110px;
+  width: 100%;
+  vertical-align: top;
+}
+
+.vertical-list, .notification-list {
+  border-bottom: 1px solid white;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+li.vertical-list:first-child {
+  border-top: 1px solid white;
+}
+
+.notification-list {
+  display: inline-block;
+  border-color: black;
+  height: 75px;
+  padding: 0;
+  width: 100%;
+  margin-top: -4px;
+}
+
+li.notification-list:last-child {
+  border: none;
+}
+
+.user-panel {
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 55px;
+  height: 60%;
+  background-color: yellow;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.user-panel.notice {
+  background-color: #EFE53C;
+  margin-right: 0px;
+}
+
+.user-panel.danger {
+  background-color: #EF543C;
+}
+
+.notification-panel {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: -150px;
+  background-color: white;
+  width: 200px;
+  height: 300px;
+  box-shadow: 0px 1px 10px #07032B;
+  z-index: 3;
+}
+
+.hidden {
+  display: none;
+}
