@@ -3,6 +3,6 @@
 @section('ngController', 'BlankController')
 
 @section('content')
-    <div class="box"> Quick Access Buttons on this page</div>
+    <div class="content-box"> Quick Access Buttons on this page</div>
 @endsection            
                    
