@@ -1,7 +1,7 @@
 .list-icon-small{
 	display : inline-block;
 	width : 16px;
-	height : 16px;
+	height : 18px;
 	background-repeat : no-repeat;
 	background-size : 16px;
 	background-position-y : 2px;
@@ -38,12 +38,6 @@
 #tag{
 	background-image : url(../../images/icomoon/16px/054-price-tag.png);
 }
-#redeem{
-	background-image : url(../../images/icomoon/16px/060-coin-dollar.png);
-}
-#transaction{
-	background-image : url(../../images/icomoon/16px/064-credit-card.png);
-}
 #product{
 	background-image : url(../../images/icomoon/16px/049-folder-open.png);
 }
@@ -52,6 +46,24 @@
 }
 #logout{
 	background-image : url(../../images/icomoon/16px/277-exit.png);
+}
+#location{
+	background-image : url(../../images/icomoon/16px/072-location.png);
+}
+#food{
+	background-image : url(../../images/icomoon/16px/164-spoon-knife.png);
+}
+#book{
+	background-image : url(../../images/icomoon/16px/032-book.png);
+}
+#report{
+	background-image : url(../../images/icomoon/16px/205-flag.png);
+}
+#log{
+	background-image : url(../../images/icomoon/16px/007-pencil2.png);
+}
+#setting{
+	background-image : url(../../images/icomoon/16px/149-cog.png);
 }
 .logout{
 	background-image : url(../../images/icomoon/32px/277-exit.png);
