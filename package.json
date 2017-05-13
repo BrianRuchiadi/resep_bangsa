@@ -23,6 +23,7 @@
     "angular-route": "^1.6.4",
     "angular-sanitize": "^1.6.4",
     "angular-ui-router": "^0.4.2",
+    "cross-env": "^5.0.0",
     "fs-extra": "^2.1.2",
     "imagemin": "^5.2.2",
     "imagemin-gifsicle": "^5.1.0",
