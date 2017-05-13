@@ -43,4 +43,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'page-stats'], function(){
 
     });
+
 });
