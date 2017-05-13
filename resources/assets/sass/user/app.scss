@@ -19,14 +19,18 @@
 
 // Pages
 // @import 'pages/*';
-@import 'pages/books';
-@import 'pages/friends';
-@import 'pages/customers';
-@import 'pages/user-books';
-@import 'pages/p-sports-accounts';
-@import 'pages/p-sports-formulas';
-@import 'pages/p-sports-settlement';
-@import 'pages/p-sports-settlement-history';
-@import 'pages/customer-account-bind';
+@import 'pages/index';
+@import 'pages/food-ingredient-index';
+@import 'pages/food-index';
+@import 'pages/market-index';
+@import 'pages/create-food-form';
+@import 'pages/create-recipe-form';
+@import 'pages/create-ingredient-form';
 
 // Apps
+
+// global
+@import 'global/global';
+
+// icon
+@import 'icons/icons';

@@ -82,23 +82,15 @@ mix.combine([
 
 //~= coco template vendor css
 //2== user
-// mix.combine([
-//    'jquery-ui/themes/ui-lightness/jquery-ui.min.css',
-//    'sweetalert2/dist/sweetalert2.min.css',
-//    'bootstrap/dist/css/bootstrap.min.css',
-//    'animate.css/animate.min.css',
-//    'ladda/dist/ladda-themeless.min.css',
-//    'daterangepicker/daterangepicker.css',
-//    'magnific-popup/dist/magnific-popup.css', 
-//    'ios7-switch/ios7-switch.css', 
-//    'pace/pace.css',
-//    'icheck/skins/all.css',
-//    // '/css/style.css', 
-//    // '/css/style-responsive.css'
-// ].map(function(p){
-// 	return path.node_modules + p;
+mix.combine([
+	'font-awesome/css/font-awesome.min.css',
+	'bulma/css/bulma.css',
+   // '/css/style.css', 
+   // '/css/style-responsive.css'
+].map(function(p){
+	return path.node_modules + p;
 
-// }), 'public/assets/css/vendor.css');
+}), 'public/assets/css/vendor.css');
 
 //~= cleanui general vendor js
 //1== admin
@@ -121,45 +113,12 @@ mix.combine([
 
 // //~= coco templates vendor js
 // //2== user
-// mix.combine([
-// 	'angular/angular.min.js',
-// 	'jquery/dist/jquery.min.js', 
-// 	'bootstrap/dist/js/bootstrap.min.js', 
+mix.combine([
+	'jquery/dist/jquery.min.js', 
+].map(function(p){ 
+	return path.node_modules + p; 
 
-// 	'jquery-ui/jquery-ui.js', 
-// 	'moment/min/moment.min.js',
-	
-// 	'angular-moment/angular-moment.min.js',
-// 	'angular-animate/angular-animate.min.js',
-// 	'angular-sanitize/angular-sanitize.min.js',
-// 	'angular-ui-router/release/angular-ui-router.min.js',
-// 	'angular-cookies/angular-cookies.min.js',
-// 	'angular-route/angular-route.min.js',
-
-// 	'sweetalert2/dist/sweetalert2.min.js',
-// 	'daterangepicker/daterangepicker.js', 
-// 	'jquery-ui-touch-punch/jquery.ui.touch-punch.min.js', 
-// 	'jquery-detectmobile/detect.js', //template provided, copied to node_modules
-//     'ios7-switch/ios7.switch.js', //template provided, copied to node_modules
-//     'fastclick/lib/fastclick.js',
-//     'block-ui/jquery.blockUI.js', 
-//     'bootstrap-bootbox/bootbox.min.js', //template provided, copied to node_modules
-//     'jquery-slimscroll/jquery.slimscroll.min.js', 
-//     'jquery-sparkline/jquery.sparkline.min.js', 
-//     'sortable/sortable.min.js',  //template provided, copied to node_modules
-//     'bootstrap-select/dist/js/bootstrap-select.min.js',
-//     'bootstrap-select2/select2.min.js', //template provided, copied to node_modules
-//    	'magnify-popup/dist/jquery.magnific-popup.min.js',
-//    	'pace/pace.min.js', //template provided, copied to node_modules
-//    	'icheck/icheck.min.js', 
-// 	'spin.js/spin.min.js',
-// 	'ladda/dist/ladda.min.js',
-//    	'bootstrap-fileinput/js/fileinput.min.js', 
-	
-// ].map(function(p){ 
-// 	return path.node_modules + p; 
-
-// }), 'public/assets/js/vendor.js');	 
+}), 'public/assets/js/vendor.js');	 
 // End of coco templates vendor for user
 
 mix.then(function () {

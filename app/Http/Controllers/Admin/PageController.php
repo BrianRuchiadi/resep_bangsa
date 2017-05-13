@@ -13,5 +13,5 @@ class PageController extends Controller
 	{
 		return view('admin.pages.index');
 	}
-
+	
 }

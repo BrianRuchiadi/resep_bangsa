@@ -29,5 +29,12 @@ class AdminController extends Controller
 	{
 
 	}
+	public function edit(Request $request, Admin $admin)
+	{
 
+	}
+	public function delete(Request $request, Admin $admin)
+	{
+
+	}
 }

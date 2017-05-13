@@ -1540,884 +1540,257 @@ blockquote .blockquote-footer {
   }
 }
 
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.books div.ng-container.overview {
-  max-width: 1100px;
-}
-
-body.books div.ng-container.overview #daterange {
-  background: #fff;
-  cursor: pointer;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  width: 280px;
-  margin: -30px 0 10px 0;
-}
-
-body.books div.ng-container.overview .balance-debit table {
-  border-left: 3px solid #032B43;
-}
-
-body.books div.ng-container.overview .balance-debit tbody td.balance {
-  color: #032B43;
-}
-
-body.books div.ng-container.overview .balance-credit table {
-  border-left: 3px solid #D00000;
-}
-
-body.books div.ng-container.overview .balance-credit tbody td.balance {
-  color: #D00000;
-}
-
-body.books div.ng-container.overview table {
-  background-color: #f8f8f8;
-}
-
-body.books div.ng-container.overview table thead th {
-  color: white;
-  background-color: #343838;
-}
-
-body.books div.ng-container.overview table thead .balance-bf, body.books div.ng-container.overview table thead .debit, body.books div.ng-container.overview table thead .credit, body.books div.ng-container.overview table thead .balance {
-  text-align: right;
-}
-
-body.books div.ng-container.overview table tfoot {
-  color: white;
-  background-color: #626868;
-}
-
-body.books div.ng-container.overview table tfoot td {
-  text-align: right;
-  font-weight: bold;
-}
-
-body.books div.ng-container.overview table tbody a {
-  text-decoration: none;
-  color: #222;
-}
-
-body.books div.ng-container.overview table tbody .balance-bf, body.books div.ng-container.overview table tbody .debit, body.books div.ng-container.overview table tbody .credit, body.books div.ng-container.overview table tbody .balance {
-  text-align: right;
-}
-
-body.books div.ng-container.overview table tbody .balance {
-  font-weight: bold;
-}
-
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.friends i.fa-star-o.on {
-  color: #FFA800;
-}
-
-body.friends div.ng-container {
-  max-width: 1100px;
-}
-
-body.friends div.friend-search form {
-  margin: -30px 0 10px 0;
-}
-
-body.friends div.friend-list .tab-content {
-  background-color: #f8f8f8;
-}
-
-body.friends thead {
-  color: white;
-  background-color: #343838;
-}
-
-body.friends .nav-tabs > li.active > a, body.friends .nav-tabs > li.active > a:focus, body.friends .nav-tabs > li.active > a:hover {
-  background-color: #f8f8f8;
-}
-
-body.friends .panel-body i {
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-body.friends .tab-content {
-  padding: 10px 15px;
-}
-
-body.friends .tab-content i.fa-info-circle {
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-body.friends .tab-content td i {
-  margin: 3px;
-}
-
-body.friends .tab-content td.balance {
-  text-align: right;
-  font-weight: bold;
-}
-
-body.friends .tab-content td.balance.positive {
-  color: #032B43;
-}
-
-body.friends .tab-content td.balance.negative {
-  color: #D00000;
-}
-
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.customers i.fa-star-o.on {
-  color: #FFA800;
-}
-
-body.customers div.ng-container {
-  max-width: 1100px;
-}
-
-body.customers div.customer-search form {
-  margin: -30px 0 10px 0;
-}
-
-body.customers div.customer-list .tab-content {
-  background-color: #f8f8f8;
-}
-
-body.customers thead {
-  color: white;
-  background-color: #343838;
-}
-
-body.customers .nav-tabs > li.active > a, body.customers .nav-tabs > li.active > a:focus, body.customers .nav-tabs > li.active > a:hover {
-  background-color: #f8f8f8;
-}
-
-body.customers .tab-content {
-  padding: 10px 15px;
-}
-
-body.customers tbody td {
-  line-height: 35px;
-  vertical-align: middle;
-}
-
-body.customers tbody tr.create td {
-  background-color: #f2f2e2;
-}
-
-body.customers .alert.alert-danger {
-  display: none;
-}
-
-body.customers .alert.alert-danger.error {
-  display: block;
-}
-
-body.customers .messages > span {
-  display: none;
-}
-
-body.customers .alert.alert-danger.error.require-name .messages > span.require-name {
-  display: inline;
-}
-
-body.customers .alert.alert-danger.error.min-name .messages > span.min-name {
-  display: inline;
-}
-
-body.customers .alert.alert-danger.error.require-username .messages > span.require-username {
-  display: inline;
-}
-
-body.customers .alert.alert-danger.error.min-username .messages > span.min-username {
-  display: inline;
-}
-
-body.customers .alert.alert-danger.error.unique-username .messages > span.unique-username {
-  display: inline;
-}
-
-body.customers .alert.alert-danger.error.require-password .messages > span.require-password {
-  display: inline;
-}
-
-body.customers .alert.alert-danger.error.min-password .messages > span.min-password {
-  display: inline;
-}
-
-body.customers .alert.alert-danger.error.unexpected .messages > span.unexpected {
-  display: inline;
-}
-
-body.customers .messages .fa-2x {
-  vertical-align: middle;
-}
-
-body.customers a.btn.btn-success.btn-sm {
-  width: 360px;
-}
-
-body.customers tr.read-mode {
-  display: table-row;
-}
-
-body.customers tr.edit-mode {
-  display: none;
-}
-
-body.customers tr.read-mode.show-edit {
-  display: none;
-}
-
-body.customers tr.edit-mode.show-edit {
-  display: table-row;
-}
-
-body.customers tr td.create-text.text-center button.btn.btn-success {
-  width: 360px;
-}
-
-body.customers tr td.delete-state.text-center button.btn.btn-danger {
-  background-color: #fb434a;
-}
-
-.error {
-  border: 1px solid red;
-}
-
-.success {
-  border: 1px solid green;
-}
-
-.small {
-  width: 300px;
-}
-
-button.empty {
-  border: none;
-  background-color: transparent;
-}
-
-.customers-list {
-  margin-top: 15px;
-}
-
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.books div.ng-container.user-books {
-  max-width: 1100px;
-}
-
-body.books div.ng-container.user-books #daterange {
-  background: #fff;
-  cursor: pointer;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  width: 260px;
-  margin: -30px 0 10px 0;
-}
-
-body.books div.ng-container.user-books .widget .fa-columns {
+form table tr td {
   color: black;
 }
 
-body.books div.ng-container.user-books table {
-  background-color: #f8f8f8;
-}
-
-body.books div.ng-container.user-books table thead {
-  color: white;
-  background-color: #343838;
-}
-
-body.books div.ng-container.user-books table thead .debit, body.books div.ng-container.user-books table thead .credit, body.books div.ng-container.user-books table thead .balance {
-  text-align: right;
-}
-
-body.books div.ng-container.user-books table tfoot {
-  color: white;
-  background-color: #626868;
-}
-
-body.books div.ng-container.user-books table tfoot td {
-  text-align: right;
-  font-weight: bold;
-}
-
-body.books div.ng-container.user-books table tbody td {
-  vertical-align: middle;
-}
-
-body.books div.ng-container.user-books table tbody a {
-  text-decoration: none;
-  color: #222;
-}
-
-body.books div.ng-container.user-books table tbody .bold {
-  font-weight: bold;
-}
-
-body.books div.ng-container.user-books table tbody .amount {
-  text-align: right;
-}
-
-body.books div.ng-container.user-books table tbody .debit.bold {
-  color: #032B43;
-}
-
-body.books div.ng-container.user-books table tbody .credit.bold {
-  color: #D00000;
-}
-
-body.books div.ng-container.user-books table tbody .balance {
-  font-weight: bold;
-}
-
-body.books div.ng-container.user-books table tbody .balance.negative {
-  color: #D00000;
-}
-
-body.books div.ng-container.user-books .inline {
-  position: absolute;
-}
-
-body.books div.ng-container.user-books .inline-input {
-  position: absolute;
-  left: 200px;
-  top: 10px;
-}
-
-body.books .form-group.absolute {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-}
-
-body.books .fa.fa-edit.absolute, body.books .fa.fa-arrow-left.absolute {
-  position: absolute;
-  top: 15px;
-  left: 250px;
-}
-
-body.books .hide {
-  display: none;
-}
-
-body.books button.btn.btn-info.edit-book-name.absolute {
-  position: absolute;
-  top: 10px;
-  left: 300px;
-  height: 25px;
-  padding: 5px;
-}
-
-body.books button.btn.btn-danger.clear-all {
-  position: absolute;
-  right: 100px;
-  top: -5px;
-}
-
-body.books .read-mode {
-  display: inline-block;
-}
-
-body.books .edit-mode {
-  display: none;
-}
-
-body.books .read-mode.show-edit {
-  display: none;
-}
-
-body.books .edit-mode.show-edit {
-  display: table-row;
-}
-
-body.books button.btn.btn-success.create {
-  width: 200px;
-}
-
-body.books button.btn.btn-success.create-book {
-  margin-top: 10px;
-  margin-left: 400px;
-  height: 25px;
-  padding: 5px;
-}
-
-body.books tr.read-mode {
-  display: table-row;
-}
-
-body.books tr.edit-mode {
-  display: none;
-}
-
-body.books tr.read-mode.show-edit {
-  display: none;
-}
-
-body.books tr.edit-mode.show-edit {
-  display: table-row;
-}
-
-body.books .edit-mode.form-group .date input, body.books .edit-mode.form-group .amount input,
-body.books .entry.form-group .date input,
-body.books .entry.form-group .amount input {
-  text-align: right;
-}
-
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.sports div.ng-container.accounts {
-  max-width: 1100px;
-}
-
-body.sports div.ng-container.accounts .list table {
-  background-color: #f8f8f8;
-}
-
-body.sports div.ng-container.accounts .list table i.fa.button {
-  cursor: pointer;
-  font-size: 16px;
-}
-
-body.sports div.ng-container.accounts .list table thead {
-  color: white;
-  background-color: #343838;
-}
-
-body.sports div.ng-container.accounts .list table tbody td {
-  vertical-align: middle;
-}
-
-body.sports div.ng-container.accounts .list table tbody a {
-  text-decoration: none;
-  color: #222;
-}
-
-body.sports div.ng-container.accounts .list table tbody a.btn {
-  color: white;
-}
-
-body.sports div.ng-container.accounts .list table tbody ul {
-  list-style-type: none;
+* {
+  margin: 0;
   padding: 0;
-}
-
-body.sports div.ng-container.accounts .list table tbody .edit a {
   color: white;
 }
 
-body.sports div.ng-container.accounts .alert.alert-danger {
-  display: none;
+.is-black {
+  color: black;
 }
 
-body.sports div.ng-container.accounts .alert.alert-danger.error {
+blockquote {
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: black;
+}
+
+figure.image img.profile {
+  border-radius: 50%;
+}
+
+button {
+  padding-left: 10px;
+}
+
+div {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+footer.footer {
+  position: relative;
+  background-color: gold;
+}
+
+.app-name {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  color: black;
+}
+
+.in-box {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  height: 36px;
+  line-height: 36px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: #3e8dd6;
+}
+
+.image img {
+  height: 100%;
+}
+
+small {
+  color: black;
+}
+
+body, div {
+  font-family: "penna";
+}
+
+.wrapper {
   display: block;
 }
 
-body.sports div.ng-container.accounts .messages > span {
-  display: none;
+.header {
+  background-color: gold;
+  line-height: 80px;
+  text-align: center;
+  /* default hijau #3E6867 */
+  /* cabe merah #FF1C1C */
+  /* terong ungu #7639AC*/
+  /* kunyit kuning #C8AA25 */
+  /* biru #23B4FC */
 }
 
-body.sports div.ng-container.accounts .alert.alert-danger.error.system-maintenance .messages > span.system-maintenance {
-  display: inline;
+li {
+  color: black;
 }
 
-body.sports div.ng-container.accounts .alert.alert-danger.error.require-manual-login .messages > span.require-manual-login {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.invalid-company .messages > span.invalid-company {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.require-username .messages > span.require-username {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.require-password .messages > span.require-password {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.require-security-code .messages > span.require-security-code {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.invalid-access .messages > span.invalid-access {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.only-sub-account .messages > span.only-sub-account {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.no-report-access .messages > span.no-report-access {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .alert.alert-danger.error.unexpected .messages > span.unexpected {
-  display: inline;
-}
-
-body.sports div.ng-container.accounts .messages .fa-2x {
-  vertical-align: middle;
-}
-
-body.sports div.ng-container.accounts tr.read-mode {
-  display: table-row;
-}
-
-body.sports div.ng-container.accounts tr.edit-mode {
-  display: none;
-}
-
-body.sports div.ng-container.accounts tr.read-mode.show-edit {
-  display: none;
-}
-
-body.sports div.ng-container.accounts tr.edit-mode.show-edit {
-  display: table-row;
-}
-
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.sports div.ng-container.formulas {
-  max-width: 1300px;
-}
-
-body.sports div.ng-container.formulas table.table > tbody > tr > td {
-  padding: 2px 4px;
-}
-
-body.sports div.ng-container.formulas i.fa.button {
-  cursor: pointer;
-}
-
-body.sports div.ng-container.formulas select.form-control {
-  padding: 6px 3px;
-}
-
-body.sports div.ng-container.formulas input[type="text"].form-control {
-  padding: 3px 5px;
-}
-
-body.sports div.ng-container.formulas input[type="text"].decimal {
-  text-align: right;
-}
-
-body.sports div.ng-container.formulas div.set-list table,
-body.sports div.ng-container.formulas div.formula-list table {
-  background-color: #f8f8f8;
-}
-
-body.sports div.ng-container.formulas div.set-list table thead,
-body.sports div.ng-container.formulas div.formula-list table thead {
-  color: white;
-  background-color: #343838;
-}
-
-body.sports div.ng-container.formulas div.set-list table tbody td,
-body.sports div.ng-container.formulas div.formula-list table tbody td {
-  line-height: 32px;
-  vertical-align: middle;
-}
-
-body.sports div.ng-container.formulas div.set-list table tbody tr.read-mode.active td,
-body.sports div.ng-container.formulas div.formula-list table tbody tr.read-mode.active td {
-  background-color: #FFE9C4;
-}
-
-body.sports div.ng-container.formulas div.set-list table tbody tr.create td,
-body.sports div.ng-container.formulas div.formula-list table tbody tr.create td {
-  background-color: #f2f2e2;
-}
-
-body.sports div.ng-container.formulas h4 a.btn {
-  margin: 0 5px;
-}
-
-body.sports div.ng-container.formulas textarea {
-  width: 100%;
-  height: 200px;
-  font-size: 12px;
-}
-
-body.sports div.ng-container.formulas tr.read-mode {
-  display: table-row;
-}
-
-body.sports div.ng-container.formulas tr.edit-mode {
-  display: none;
-}
-
-body.sports div.ng-container.formulas tr.read-mode.show-edit {
-  display: none;
-}
-
-body.sports div.ng-container.formulas tr.edit-mode.show-edit {
-  display: table-row;
-}
-
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.sports div.ng-container.settlement {
-  max-width: 1100px;
-}
-
-body.sports div.ng-container.settlement #daterange {
-  background: #fff;
-  cursor: pointer;
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  width: 260px;
-  margin: 0px 0 10px 0;
-}
-
-body.sports div.ng-container.settlement textarea {
-  width: 100%;
-  height: 280px;
-  font-size: 12px;
-}
-
-body.sports div.ng-container.settlement .row.info {
-  margin: 15px auto;
-}
-
-body.sports div.ng-container.settlement .row.info div {
-  background-color: #fafafa;
-  padding: 10px;
-}
-
-body.sports div.ng-container.settlement .row.info i {
-  vertical-align: middle;
-}
-
-body.sports div.ng-container.settlement .info.no-report i.fa-warning {
-  vertical-align: middle;
-  margin-right: 20px;
-}
-
-body.sports div.ng-container.settlement .preview, body.sports div.ng-container.settlement .book-summary {
-  background-color: #f8f8f8;
-}
-
-body.sports div.ng-container.settlement .preview thead, body.sports div.ng-container.settlement .book-summary thead {
-  color: white;
-  background-color: #343838;
-}
-
-body.sports div.ng-container.settlement .preview thead .amount, body.sports div.ng-container.settlement .book-summary thead .amount {
-  text-align: right;
-}
-
-body.sports div.ng-container.settlement .preview tfoot, body.sports div.ng-container.settlement .book-summary tfoot {
-  color: white;
-  background-color: #626868;
-}
-
-body.sports div.ng-container.settlement .preview tfoot td, body.sports div.ng-container.settlement .book-summary tfoot td {
-  text-align: right;
-  font-weight: bold;
-}
-
-body.sports div.ng-container.settlement .preview tbody td, body.sports div.ng-container.settlement .book-summary tbody td {
-  vertical-align: middle;
-}
-
-body.sports div.ng-container.settlement .preview tbody a, body.sports div.ng-container.settlement .book-summary tbody a {
-  text-decoration: none;
-  color: #222;
-}
-
-body.sports div.ng-container.settlement .preview tbody .bold, body.sports div.ng-container.settlement .book-summary tbody .bold {
-  font-weight: bold;
-}
-
-body.sports div.ng-container.settlement .preview tbody .amount, body.sports div.ng-container.settlement .book-summary tbody .amount {
-  text-align: right;
-}
-
-body.sports div.ng-container.settlement .preview tbody .debit.on, body.sports div.ng-container.settlement .book-summary tbody .debit.on {
-  color: #032B43;
-}
-
-body.sports div.ng-container.settlement .preview tbody .credit.on, body.sports div.ng-container.settlement .book-summary tbody .credit.on {
-  color: #D00000;
-}
-
-body.sports div.ng-container.settlement .preview tbody .balance, body.sports div.ng-container.settlement .book-summary tbody .balance {
-  font-weight: bold;
-}
-
-body.sports div.ng-container.settlement .preview tbody .balance.negative, body.sports div.ng-container.settlement .book-summary tbody .balance.negative {
-  color: #D00000;
-}
-
-body.sports div.ng-container.settlement .book-summary tbody .amount.debit, body.sports div.ng-container.settlement .book-summary tbody .amount.amount.credit, body.sports div.ng-container.settlement .book-summary tbody .amount.amount.balancebf {
-  font-weight: normal;
-}
-
-body.sports div.ng-container.settlement .book-summary tbody .balance {
-  color: #032B43;
-}
-
-body.sports div.ng-container.settlement .widget-header h2 {
-  padding-right: 50px;
-  padding-top: 6px;
-}
-
-body.sports div.ng-container.settlement .alert.alert-danger {
-  display: none;
-}
-
-body.sports div.ng-container.settlement .alert.alert-danger.error {
+.box {
+  -webkit-filter: drop-shadow(1px 4px 5px black);
+          filter: drop-shadow(1px 4px 5px black);
+  box-shadow: 0px 0px 3px;
+  margin: 0 auto;
   display: block;
 }
 
-body.sports div.ng-container.settlement .messages > span {
-  display: none;
+.tabs ul {
+  margin: 0;
 }
 
-body.sports div.ng-container.settlement .alert.alert-danger.error.system-maintenance .messages > span.system-maintenance {
-  display: inline;
+.navigation.column {
+  padding-left: 0px;
+  padding-top: 0px;
 }
 
-body.sports div.ng-container.settlement .alert.alert-danger.error.require-manual-login .messages > span.require-manual-login {
-  display: inline;
+.map {
+  background-color: transparent;
 }
 
-body.sports div.ng-container.settlement .alert.alert-danger.error.invalid-access .messages > span.invalid-access {
-  display: inline;
+.product-box {
+  background-color: transparent;
 }
 
-body.sports div.ng-container.settlement .alert.alert-danger.error.only-sub-account .messages > span.only-sub-account {
-  display: inline;
+.product.card {
+  background-color: #ECF4FD;
+  height: inherit;
+  display: inline-block;
+  height: 100%;
 }
 
-body.sports div.ng-container.settlement .alert.alert-danger.error.no-report-access .messages > span.no-report-access {
-  display: inline;
+.main-image-wrapper.column {
+  height: 500px;
+  width: 100%;
 }
 
-body.sports div.ng-container.settlement .alert.alert-danger.error.api-not-found .messages > span.api-not-found {
-  display: inline;
-}
-
-body.sports div.ng-container.settlement .alert.alert-danger.error.unexpected .messages > span.unexpected {
-  display: inline;
-}
-
-body.sports div.ng-container.settlement .messages .fa-2x {
-  vertical-align: middle;
-}
-
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.sports div.ng-container.settlement-history {
-  max-width: 1101px;
-}
-
-body.sports div.ng-container.settlement-history div.list table {
-  background-color: #f8f8f8;
-}
-
-body.sports div.ng-container.settlement-history div.list table thead {
-  color: white;
-  background-color: #343838;
-}
-
-body.sports div.ng-container.settlement-history div.list table thead th.amount {
-  text-align: right;
-}
-
-body.sports div.ng-container.settlement-history div.list table tbody td {
-  line-height: 32px;
-  vertical-align: middle;
-}
-
-body.sports div.ng-container.settlement-history div.list table tbody td.amount {
-  text-align: right;
-}
-
-body.sports div.ng-container.settlement-history div.list table tbody td.amount.debit {
-  color: #032B43;
-}
-
-body.sports div.ng-container.settlement-history div.list table tbody td.amount.credit {
-  color: #D00000;
-}
-
-body.sports div.ng-container.settlement-history div.list table tbody td.amount.negative {
-  color: #D00000;
-}
-
-body.sports div.ng-container.settlement-history div.list table tbody td.date {
+.main-image.column {
+  position: relative;
+  background-image: url(../images/food/gado_gado.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  -webkit-filter: drop-shadow(1px 16px 20px black);
+          filter: drop-shadow(1px 16px 20px black);
   text-align: center;
 }
 
-/*Large Desktop*/
-/*Desktop*/
-/*Small desktop or tablet*/
-/*Phone*/
-body.customer-account div.ng-container.customer-account {
-  max-width: 1100px;
+.main-image.column span {
+  display: inline-block;
+  font-family: 'Lobster', cursive;
+  height: 100%;
+  widows: 100%;
+  line-height: 500px;
+  font-size: 80px;
 }
 
-body.customer-account div.ng-container.customer-account i.fa.button {
-  cursor: pointer;
-  font-size: 18px;
+.card-image span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 150px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  z-index: 2;
 }
 
-body.customer-account div.ng-container.customer-account select.form-control {
-  padding: 6px 3px;
+.half-white.layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  left: 0px;
+  opacity: 0.4;
+  z-index: 2;
 }
 
-body.customer-account div.ng-container.customer-account div.customers-list table {
-  background-color: #f8f8f8;
+.vision.column blockquote {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
-body.customer-account div.ng-container.customer-account div.customers-list table thead {
+.content-summary-statistic {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.footer-wrapper {
+  height: 100%;
+}
+
+.footer-link {
+  height: 20%;
+}
+
+.footer-content {
+  height: 60%;
+}
+
+.footer-social-media {
+  height: 20%;
+}
+
+.search-input.control {
+  position: relative;
+}
+
+.page-index.column {
+  text-align: center;
+}
+
+.ingredient.content {
+  text-align: center;
+}
+
+.product.card {
+  min-width: 200px;
+  width: 100%;
+}
+
+.fa {
+  color: black;
+}
+
+.fa-plus {
   color: white;
-  background-color: #343838;
+  width: 25px;
 }
 
-body.customer-account div.ng-container.customer-account div.customers-list table tbody td {
-  line-height: 35px;
-  vertical-align: middle;
+.fa-map {
+  color: #3E6867;
 }
 
-body.customer-account div.ng-container.customer-account div.customers-list table tbody tr.create td {
-  background-color: #f2f2e2;
+.fa-map-marker {
+  width: 25px;
+  color: red;
 }
 
-body.customer-account div.ng-container.customer-account tr.read-mode {
-  display: table-row;
+.fa-eye, .fa-cutlery, .fa-book {
+  color: black;
+  width: 25px;
 }
 
-body.customer-account div.ng-container.customer-account tr.edit-mode {
-  display: none;
-}
-
-body.customer-account div.ng-container.customer-account tr.read-mode.show-edit {
-  display: none;
-}
-
-body.customer-account div.ng-container.customer-account tr.edit-mode.show-edit {
-  display: table-row;
+.fa-facebook, .fa-twitter, .fa-instagram, .fa-whatsapp {
+  height: 30px;
+  width: 20px;
+  color: black;
+  font-size: 20px;
 }

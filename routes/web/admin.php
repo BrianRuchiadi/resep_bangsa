@@ -9,11 +9,16 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/add', 'AdminController@showCreateForm');
     Route::get('/edit/{admin}', 'AdminController@showEditForm');
     Route::post('/add', 'AdminController@create');
-    Route::post('/edit', 'AdminController@edit');
-    Route::post('/remove', 'AdminController@delete');
+    Route::post('/edit/{admin}', 'AdminController@edit');
+    Route::post('/remove/{admin}', 'AdminController@delete');
 
     Route::group(['prefix' => 'user'], function() {
-    	
+        Route::get('/list', 'UserController@index');
+        Route::get('/add', 'UserController@showCreateForm');
+        Route::get('/edit/{user}', 'UserController@showEditForm');
+        Route::post('/add', 'UserController@create');
+        Route::post('/edit/{user}', 'UserController@edit');
+        Route::post('/remove/{user}', 'UserController@delete');
     });
 
     Route::group(['prefix' => 'location'], function() {

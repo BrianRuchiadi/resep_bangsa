@@ -1,0 +1,199 @@
+*{
+	margin : 0;
+	padding : 0;
+	color : white;
+}
+.is-black{
+	color : black;
+}
+blockquote{
+	font-family: 'Pacifico', cursive;
+	font-size : 30px;
+	color : black;
+
+}
+figure.image img.profile{
+	border-radius : 50%;
+}
+button{
+	padding-left : 10px;
+}
+div{
+	display : block;
+	font-family : 'Roboto Condensed', sans-serif;
+}
+footer.footer{
+	position : relative;
+	background-color: gold;
+}
+.app-name{
+	font-family: 'Lobster', cursive;
+	font-size : 40px;
+	color : black;
+}
+
+.in-box{
+	position : absolute;
+	z-index: 2;
+	right : 10px;
+	height : 36px;
+	line-height: 36px;
+}
+img{
+	width : 100%;
+	height : 100%;
+}
+a{
+	color : #3e8dd6;
+}
+.image img{
+	height : 100%;
+}
+small{
+	color : black;
+}
+
+
+body, div{
+	font-family : "penna";
+}
+
+.wrapper{
+	display : block;
+}
+.header{
+	background-color : gold;
+	line-height: 80px;
+	text-align: center;
+	/* default hijau #3E6867 */
+	/* cabe merah #FF1C1C */
+	/* terong ungu #7639AC*/
+	/* kunyit kuning #C8AA25 */
+	/* biru #23B4FC */
+
+}
+
+li{
+	color : black;
+}
+
+
+.box{
+	filter: drop-shadow(1px 4px 5px black);
+	box-shadow : 0px 0px 3px;
+	margin : 0 auto;
+	display : block;
+}
+
+.tabs ul{
+	margin : 0;
+}
+.navigation.column{
+	padding-left : 0px;
+	padding-top : 0px;
+}
+.map{
+	background-color : transparent;
+}
+
+.product-box{
+	background-color : transparent;
+}
+.product.card{
+	background-color : #ECF4FD;
+	height: inherit;
+	display: inline-block;
+	height: 100%;
+}
+.main-image-wrapper.column{
+	height : 500px;
+	width: 100%;
+}
+
+.main-image.column{
+	position : relative;
+	background-image: url(../images/food/gado_gado.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display : block;
+	max-width : 100%;
+	height: 100%;
+	filter: drop-shadow(1px 16px 20px black);
+	text-align: center;
+}
+
+.main-image.column span{
+	display : inline-block;
+	font-family: 'Lobster', cursive;
+	height: 100%;
+	widows: 100%;
+	line-height: 500px;
+	font-size : 80px;
+}
+
+.card-image span{
+	display: inline-block;
+	position : absolute;
+	top : 0;
+	height: 100%;
+	width: 100%;
+	line-height: 150px;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+	z-index: 2;
+}
+
+.half-white.layer{
+	position : absolute;
+	height: 100%;
+	width : 100%;
+	background-color: white;
+	transform : translateY(-50%);
+	top : 50%;
+	left : 0px;
+	opacity: 0.4;
+	z-index: 2;
+}
+
+.vision.column blockquote{
+	display : inline-block;
+	vertical-align: bottom;
+	width: 100%;
+	height : 100%;
+	text-align: center;
+}
+.content-summary-statistic{
+	position : relative;
+	width: 100%;
+	
+	text-align : center;
+	color : black;
+}
+
+.footer-wrapper{
+	height : 100%;
+}
+
+.footer-link{
+	height : 20%;
+}
+.footer-content{
+	height : 60%;
+}
+.footer-social-media{
+	height : 20%;
+}
+.search-input.control{
+	position : relative;
+}
+.page-index.column{
+	text-align: center;
+}
+.ingredient.content{
+	text-align: center;
+}
+.product.card{
+	min-width: 200px;
+	width : 100%;
+}
