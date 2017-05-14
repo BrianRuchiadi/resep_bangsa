@@ -20,7 +20,7 @@
 		<tr>
 			<td></td>
 			<td >
-			<button class="button is-primary" type="submit">tambahkan</button>
+			<button class="button is-warning" type="submit">tambahkan</button>
 			</td>
 		</tr>	
 	</table>

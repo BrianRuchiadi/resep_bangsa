@@ -40,5 +40,8 @@ class PageController extends Controller
 	{
 		return view('user.pages.create-food-form');
 	}
-
+	public function showRequestFoodForm()
+	{
+		return view('user.pages.request-food-form');
+	}
 }

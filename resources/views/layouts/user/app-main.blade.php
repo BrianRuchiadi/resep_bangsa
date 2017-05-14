@@ -282,10 +282,12 @@
 						kontribusi bahan makanan
 					</button>
 					</a>
+					<a href="{{ url ('permintaan/data-makanan')}}">
 					<button class="button is-info">
 						<i class="fa fa-plus" aria-hidden="true"></i>
 						permintaan data makanan
 					</button>
+					</a>
 				</div> 
 
 				@yield('content')
