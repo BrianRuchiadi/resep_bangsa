@@ -33,7 +33,7 @@
 		</header>
 
 		<div class="main-content columns">
-			<div class="navigation column is-narrow">
+			<div class="navigation column is-narrow is-hidden-mobile">
 				<nav class="panel">
 					<a class="panel-block is-active">
 						<span class="panel-icon">

@@ -1765,6 +1765,10 @@ li {
   width: 100%;
 }
 
+.input.image.is-4by3 {
+  margin-top: 10px;
+}
+
 .fa {
   color: black;
 }

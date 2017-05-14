@@ -17,3 +17,8 @@ $(document).ready(function(){
 		$('.card-image span').remove();
 	});
 });
+
+var loadFile = function(event){
+	var output = document.getElementById('output');
+	output.src = URL.createObjectURL(event.target.files[0]);
+};

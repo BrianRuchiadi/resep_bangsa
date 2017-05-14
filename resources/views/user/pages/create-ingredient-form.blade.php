@@ -2,24 +2,19 @@
 @section('content')
 
 
-<form>
+<form method="POST" action="{{ url('/kontribusi/bahan-makanan') }}" enctype="multipart/form-data">
+	{{ csrf_field() }}
 	<table>
 		<tr>
-			<td>nama bahan</td>
-			<td><input type="text" name="name"></td>
+			<td>Nama Bahan</td>
+			<td><input class="input" type="text" name="ingredient_name" required></td>
 		</tr>
 		<tr>
-			<td>gambar</td>
-			<td><input type="file" name="picture" accept="image/png" onchange="loadFile(event)" />
-			<figure class="image is-128x128">
+			<td>Gambar</td>
+			<td><input class="input" type="file" name="ingredient_picture" accept="image/png" onchange="loadFile(event)" required />
+			<figure class="input image is-4by3">
 				<img id="output"/>
 			</figure>
-			<script>
-				var loadFile = function(event){
-					var output = document.getElementById('output');
-					output.src = URL.createObjectURL(event.target.files[0]);
-				};
-			</script>
 			</td>
 		</tr>
 		<tr>

@@ -13,4 +13,5 @@ Route::group(['prefix' => '', 'namespace' => 'User'], function () {
 	Route::get('/kontribusi/resep', 'PageController@showCreateRecipeForm');
 	Route::get('/kontribusi/data-makanan', 'PageController@showCreateFoodForm');
 
+	Route::post('/kontribusi/bahan-makanan', 'IngredientController@createIngredient');
 });
