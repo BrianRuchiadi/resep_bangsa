@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Models\Ingredient;
+use App\Models\ReportType;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -22,9 +23,11 @@ class PageController extends Controller
 		$ingredients = Ingredient::where('deleted_at', null)->
 							orderBy('name', 'asc')->
 							paginate(16);
+		$reportTypes = ReportType::all();
 
 		return view('user.pages.ingredient-index', 
-			['ingredients' => $ingredients]);
+			['ingredients' => $ingredients,
+			 'reportTypes' => $reportTypes]);
 	}
 	public function showMarketIndex()
 	{

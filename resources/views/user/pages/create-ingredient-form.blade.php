@@ -13,11 +13,6 @@
 			<td colspan="2" class="error">{{ $errors->first() }}</td>
 		</tr>
 		@endif
-		@if(Session::has('success'))
-		<tr>
-			<td colspan="2" class="success">{{ Session::get('success') }}</td>
-		</tr>
-		@endif
 		<tr>
 			<td>Email</td>
 			<td><input class="input" type="email" name="email" required></td>
@@ -41,5 +36,21 @@
 			</td>
 		</tr>	
 	</table>
+	@if(Session::has('ingredient-add-success'))
+		<script>
+		swal({
+		  title: 'Bahan Berhasil Ditambahkan!',
+		  text: '{{ Session::get("ingredient-add-success") }}',
+		  timer: 2500
+		}).then(
+		  function () {},
+		  // handling the promise rejection
+		  function (dismiss) {
+		    if (dismiss === 'timer') {
+		    }
+		  }
+		)
+	</script>
+	@endif
 </form>
 @endsection

@@ -23,6 +23,7 @@
     "angular-route": "^1.6.4",
     "angular-sanitize": "^1.6.4",
     "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7",
     "bulma": "^0.4.1",
     "cross-env": "^5.0.0",
     "font-awesome": "^4.7.0",

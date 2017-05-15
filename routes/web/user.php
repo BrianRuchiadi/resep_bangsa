@@ -6,7 +6,7 @@ Route::group(['prefix' => '', 'namespace' => 'User'], function () {
 	Route::Auth();
 	Route::get('/', 'PageController@index');
 	Route::get('/makanan', 'PageController@showFoodIndex');
-	Route::get('/bahan-makanan', 'PageController@showIngredientIndex');
+	Route::name('bahan-makanan')->get('/bahan-makanan', 'PageController@showIngredientIndex');
 	Route::get('/pasar', 'PageController@showMarketIndex');
 	Route::get('/hubungi', 'PageController@showContactIndex');
 	Route::name('kontribusi-bahan-makanan')->get('/kontribusi/bahan-makanan', 'PageController@showCreateIngredientForm');
@@ -16,4 +16,6 @@ Route::group(['prefix' => '', 'namespace' => 'User'], function () {
 
 	Route::post('/kontribusi/bahan-makanan', 'IngredientController@createIngredient');
 	Route::post('/permintaan/data-makanan', 'FoodController@submitRequestFoodForm');
+	Route::post('/laporan/bahan-makanan', 'ReportController@submitIngredientReport');
+
 });
