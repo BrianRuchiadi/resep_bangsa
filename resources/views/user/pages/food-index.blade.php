@@ -1,1 +1,4 @@
-ini adalah food-index
+@extends('layouts.user.app-main')
+@section('content')
+
+@endsection

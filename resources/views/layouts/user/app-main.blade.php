@@ -253,7 +253,7 @@
 					    <li class="is-active"><a href="{{ url('/') }}">Beranda</a></li>
 					    <li><a href="{{ url('makanan') }}">Makanan</a></li>
 					    <li><a href="{{ url('bahan-makanan') }}">Bahan Makanan</a></li>
-					    <li><a href="#">Pasar</a></li>
+					    <li><a href="{{ url('pasar') }}">Pasar</a></li>
 					  </ul>
 					</div>
 				</div>
@@ -302,7 +302,8 @@
 		    	<i class="fa fa-facebook"></i>
 		    	<i class="fa fa-twitter"></i>
 		    	<i class="fa fa-instagram"></i>
-		    	<i class="fa fa-whatsapp"></i>
+		    	<i class="fa fa-whatsapp"></i><br>
+		    	<a href="{{ url ('hubungi')}}">Contact Us</a>
 		    </div>
 		  </div>
 		</footer>
