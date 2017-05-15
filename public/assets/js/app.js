@@ -16,7 +16,30 @@ $(document).ready(function(){
 		$('.card-image div.half-white.layer').remove();
 		$('.card-image span').remove();
 	});
+
+	$('#submit-ingredient-report').prop('disabled', true);
+
 });
+
+var openIngredientReport = function(relatedId){
+	$('#ingredient_' + relatedId).addClass('is-active');
+};
+
+var closeIngredientReport = function(relatedId){
+	$('#ingredient_' + relatedId).removeClass('is-active');
+};
+
+var checkEmail = function(){
+	var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+	if(!re.test($('#email').val())){
+		$('input[type="email"]:focus').css('border-color', 'red');
+		$('#submit-ingredient-report').prop('disabled', true);
+	}else{
+		$('input[type="email"]:focus').css('border-color', 'blue');
+		$('#submit-ingredient-report').prop('disabled', false);
+	}
+}
 
 var loadFile = function(event){
 	var output = document.getElementById('output');

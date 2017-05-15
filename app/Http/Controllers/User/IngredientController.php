@@ -29,6 +29,7 @@ class IngredientController extends Controller
 		]);
 
 		$userId = (Auth::user()) ? Auth::user()->id : null;
+		$userEmail = (Auth::user()) ? Auth::user()->email : null;
 
 		$image = $request->file('ingredient_picture');
 		$imageName = time() . '_' . strtolower($request->input('ingredient_name')) . '.' . $image->getClientOriginalExtension();
@@ -50,12 +51,12 @@ class IngredientController extends Controller
 		$logInsert = LogInsert::create([
 			'user_type' => 'user',
 			'user_id' => $userId,
-			'user_email' => $request->input('email'),
+			'user_email' => $userEmail,
 			'table_name' => 't0401_ingredient',
 			'table_id' => $ingredient->id
 		]);
 
-		$request->session()->flash('success', 'bahan makanan berhasil di tambahkan');
+		$request->session()->flash('ingredient-add-success', 'bahan makanan berhasil di tambahkan');
 		return redirect()->route('kontribusi-bahan-makanan');
 	}
 

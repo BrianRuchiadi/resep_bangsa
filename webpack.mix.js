@@ -83,6 +83,8 @@ mix.combine([
 //~= coco template vendor css
 //2== user
 mix.combine([
+	'bootstrap/dist/bootstrap.min.css',
+	'sweetalert2/dist/sweetalert2.min.css',
 	'font-awesome/css/font-awesome.min.css',
 	'bulma/css/bulma.css',
    // '/css/style.css', 
@@ -115,6 +117,8 @@ mix.combine([
 // //2== user
 mix.combine([
 	'jquery/dist/jquery.min.js', 
+	'bootstrap/dist/js/bootstrap.min.js',
+	'sweetalert2/dist/sweetalert2.min.js',
 ].map(function(p){ 
 	return path.node_modules + p; 
 
