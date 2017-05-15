@@ -1695,13 +1695,25 @@ li {
   text-align: center;
 }
 
-.main-image.column span, .ingredient-main-image span {
+.main-image.column span, .ingredient-main-image span, .food-main-image.column {
   display: inline-block;
   font-family: 'Lobster', cursive;
   height: 100%;
   widows: 100%;
   line-height: 500px;
   font-size: 80px;
+}
+
+.food-main-image.column {
+  position: relative;
+  background-image: url(../images/food/bahan.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  -webkit-filter: drop-shadow(1px 16px 20px black);
+          filter: drop-shadow(1px 16px 20px black);
+  text-align: center;
 }
 
 .card-image span {
@@ -1866,7 +1878,7 @@ li {
 }
 
 .fa.fa-flag {
-  color: red;
+  color: black;
   font-size: 16px;
   z-index: 4;
   position: absolute;
