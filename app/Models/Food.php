@@ -18,6 +18,6 @@ class Food extends Model
      * @var array
      */
     protected $fillable = [
-    	'name', 'picture', 'used_in', 'verified', 'is_active', 'location_id'
+    	'name', 'picture', 'featured_in', 'verified', 'is_active', 'location_id'
     ];
 }

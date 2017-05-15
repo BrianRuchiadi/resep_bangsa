@@ -1,59 +1,81 @@
 @extends('layouts.user.app-main')
 @section('content')
-<form method="POST" action="{{ url('/kontribusi/bahan-makanan') }}" enctype="multipart/form-data">
+<form method="POST" action="{{ url('/kontribusi/data-makanan') }}" enctype="multipart/form-data">
 	{{ csrf_field() }}
 	<table>
 		<tr>
+			<td colspan="2"><h1> Kontribusi Data Makanan </h1></td>
+		</tr>
+		@if(count($errors) > 0)
+		<tr>
+			<td colspan="2" class="error">{{ $errors->first() }}</td>
+		</tr>
+		@endif
+		@if(!Auth::user())
+		<tr>
+			<td>Email</td>
+			<td><input class="input" type="text" name="email" placeholder="masukan email" required></td>
+		</tr>
+		@endif
+		<tr>
 			<td>Nama Makanan</td>
-			<td><input class="input" type="text" name="food_name" placeholder="masukan nama makanan"></td>
+			<td><input class="input" type="text" name="food_name" placeholder="masukan nama makanan" required></td>
 		</tr>
 		<tr>
-			<td>judul overview1 </td>
-			<td><input class="input" type="text" name="overview_1_header"/></td>
+			<td>Asal Makanan</td>
+			<td><span class="select">
+				<select name="food_region">
+					@foreach($locations as $location)
+						<option value="{{ $location->id }}">{{ $location->name }}</option>
+					@endforeach
+				</select></span></td>
 		</tr>
-		<tr>
-			<td>penjelasan</td>
-			<td><textarea cols="51.2" rows="10" name="overview_1"></textarea></td>
-		</tr>
-		<tr>
-			<td>juduloverview2</td>
-			<td><input class="input" type="text" name="overview_2_header"></td></td>
-		</tr>
-		<tr>
-			<td>penjelasan</td>
-			<td><textarea cols="51.2" rows="10" name="overview_2"></textarea></td>
-		</tr>
-		<tr>
-			<td>judul overview3</td>
-			<td><input class="input" type="text" name="overview_3_header"/></td>
-		</tr>
-		<tr>
-			<td>penjelasan</td>
-			<td><textarea cols="51.2" rows="10" name="overview_3"></textarea></td>
-		</tr>
-		<tr>
-			<td>judul overview4</td>
-			<td><input class="input" type="text" name="overview_4_header"/></td>
-		</tr>
-		<tr>
-			<td>penjelasan</td>
-			<td><textarea cols="51.2" rows="10" name="overview_4"></textarea></td>
-		</tr>
-		<tr>
-			<td>langkah-langkah pembuatan</td>
-			<td><input class="input" type="text" name="food_step"/></td>
-		</tr>	
 		<tr>
 			<td>Foto Makanan</td>
-			<td><input class="input" type="file" name="ingredient_picture" accept="image/png" onchange="loadFile(event)" required />
+			<td><input class="input" type="file" name="food_picture" accept="image/*" onchange="loadFile(event)" required />
 			<figure class="input image is-4by3">
 				<img id="output"/>
 			</figure>
 			</td>
 		</tr>
 		<tr>
+			<td colspan="2">
+				<h1 class="has-text-centered"> Sejarah Makanan </h1>
+			</td>
+		</tr>
+		<tr>
+			<td>Deskripsi</td>
+			<td><textarea class="textarea" name="overview_1"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h1 class="has-text-centered"> Deskripsi </h1>
+			</td>
+		</tr>
+		<tr>
+			<td>Deskripsi</td>
+			<td><textarea class="textarea" name="overview_2"></textarea></td>
+		</tr>
+		<tr>
 			<td></td>
 			<td><button class="button is-primary"> kontribusi </button>
+		</td>
 	</table>
+	@if(Session::has('food-add-success'))
+		<script>
+		swal({
+		  title: 'Bahan Berhasil Ditambahkan!',
+		  text: '{{ Session::get("food-add-success") }}',
+		  timer: 2500
+		}).then(
+		  function () {},
+		  // handling the promise rejection
+		  function (dismiss) {
+		    if (dismiss === 'timer') {
+		    }
+		  }
+		)
+	</script>
+	@endif
 </form>
 @endsection

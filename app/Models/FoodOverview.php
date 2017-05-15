@@ -21,11 +21,7 @@ class FoodOverview extends Model
     	'food_id',
         'overview_1_header',
         'overview_2_header',
-        'overview_3_header',
-        'overview_4_header',
         'overview_1',
-        'overview_2',
-        'overview_3',
-        'overview_4'
+        'overview_2'
     ];
 }

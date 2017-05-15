@@ -26,6 +26,9 @@ class ReportController extends Controller
 			'email.email' => 'format email tidak memadai' 
 		]);
 
+		$userId = (Auth::user()) ? Auth::user()->id : null;
+		$userEmail = (Auth::user()) ? Auth::user()->email : $request->input('email');
+ 
 		$userReport = UserReport::create([
 			'report_type_id' => $request->input('kategori_laporan'),
 			'reported_by' => $request->input('email'),
@@ -36,13 +39,13 @@ class ReportController extends Controller
 		$logInsert = LogInsert::create([
 			'user_type' => 'user',
 			'user_id' => $userId,
-			'user_email' => $request->input('email'),
+			'user_email' => $userEmail,
 			'table_name' => 't0401_ingredient',
-			'table_id' => $ingredient->id
+			'table_id' => $userReport->id
 		]);
-		dd($request->all());	
 
 		$request->session()->flash('ingredient-report-success', 'Laporan Anda berhasil ditambahkan');
+		
 		return redirect()->route('bahan-makanan');
 	}
 }

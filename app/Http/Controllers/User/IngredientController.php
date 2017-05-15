@@ -21,7 +21,7 @@ class IngredientController extends Controller
 			'ingredient_name' => 'bail|required|min:3|unique:t0401_ingredient,name',
 			'ingredient_picture' => 'bail|required'
 		], [
-			'email.email' => 'email format is not valid',
+			'email.email' => 'format email tidak valid',
 			'ingredient_name.required' => 'nama bahan di butuhkan',
 			'ingredient_name.min' => 'nama bahan minimal 3 huruf',
 			'ingredient_name.unique' => 'nama bahan harus unik',
@@ -29,7 +29,7 @@ class IngredientController extends Controller
 		]);
 
 		$userId = (Auth::user()) ? Auth::user()->id : null;
-		$userEmail = (Auth::user()) ? Auth::user()->email : null;
+		$userEmail = (Auth::user()) ? Auth::user()->email : $request->input('email');
 
 		$image = $request->file('ingredient_picture');
 		$imageName = time() . '_' . strtolower($request->input('ingredient_name')) . '.' . $image->getClientOriginalExtension();

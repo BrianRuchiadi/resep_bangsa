@@ -1831,6 +1831,10 @@ li {
   background-color: darkgrey;
 }
 
+.food.content h3 {
+  text-align: center;
+}
+
 .fa {
   color: black;
 }

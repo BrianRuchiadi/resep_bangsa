@@ -55,10 +55,12 @@
 						  				<td>Deskripsi</td>
 						  				<td><textarea class="textarea" name="deskripsi_laporan" id="deskripsi_laporan"></textarea></td>
 						  			</tr>
+						  			@if(!Auth::user())
 						  			<tr>
 						  				<td>Email</td>
 						  				<td><input type="email" id="email" class="input" name="email" onkeyup="checkEmail()" onmouseleave="checkEmail()"></td>
 						  			</tr>
+						  			@endif
 						  			<tr>
 						  				<td></td>
 						  				<td><button type="submit" id="submit-ingredient-report" class="button is-info">Laporkan</button></td>

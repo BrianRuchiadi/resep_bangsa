@@ -250,7 +250,7 @@
 				<div class="sub-nav column">
 					<div class="tabs">
 					  <ul>
-					    <li class="is-active"><a href="{{ url('/') }}">Beranda</a></li>
+					    <li><a href="{{ url('/') }}">Beranda</a></li>
 					    <li><a href="{{ url('makanan') }}">Makanan</a></li>
 					    <li><a href="{{ url('bahan-makanan') }}">Bahan Makanan</a></li>
 					    <li><a href="#">Pasar</a></li>

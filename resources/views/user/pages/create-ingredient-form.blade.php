@@ -13,10 +13,12 @@
 			<td colspan="2" class="error">{{ $errors->first() }}</td>
 		</tr>
 		@endif
+		@if(!Auth::user())
 		<tr>
 			<td>Email</td>
 			<td><input class="input" type="email" name="email" required></td>
 		</tr>
+		@endif
 		<tr>
 			<td>Nama Bahan</td>
 			<td><input class="input" type="text" name="ingredient_name" required></td>
