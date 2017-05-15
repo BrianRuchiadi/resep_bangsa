@@ -22,6 +22,7 @@ $(document).ready(function(){
 });
 
 var openIngredientReport = function(relatedId){
+	
 	$('#ingredient_' + relatedId).addClass('is-active');
 };
 
