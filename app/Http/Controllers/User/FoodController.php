@@ -7,6 +7,8 @@ use App\Models\FoodOverview;
 use App\Models\FoodIngredient;
 use App\Models\FoodTaste;
 use App\Models\FoodNutritionFact;
+use App\Models\LogInsert;
+use App\Models\Inquiry;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
@@ -19,16 +21,35 @@ class FoodController extends Controller
 {
 	public function submitRequestFoodForm (Request $request)
 	{
+		$this->validate($request,[
+			'email' => 'bail|required|email',
+			'food_name' => 'bail|required|min:3|unique:t0501_food,name'
+		], [
+			'email.required' => 'email dibutuhkan untuk verifikasi',
+			'email.email' => 'format email tidak valid',
+			'food_name.required' => 'nama makanan di butuhkan',
+			'food_name.min' => 'nama makanan minimal 3 huruf',
+			'food_name.unique' => 'nama makanan sudah tersedia'
+		]);
 
-		dd($request->all());
+		Inquiry::create([
+			'inquired_by' => $request->input('email'),
+			'description' => 'permintaan data makanan ' . $request->input('food_name'),
+			'is_read' => 0
+		]);
+
+		$request->session()->flash('food-request-success', 'permintaan data makanan berhasil di simpan');
+
+		return redirect()->route('permintaan-data-makanan');
 	}
 
 	public function createFood(Request $request)
 	{
 		$this->validate($request,[
-			'email' => 'bail|email',
+			'email' => 'bail|required|email',
 			'food_name' => 'bail|required|min:3|unique:t0501_food,name'
 		], [
+			'email.required' => 'email dibutuhkan untuk verifikasi',
 			'email.email' => 'format email tidak valid',
 			'food.required' => 'nama makanan di butuhkan',
 			'food.min' => 'nama makanan minimal 3 huruf',
@@ -73,6 +94,14 @@ class FoodController extends Controller
 			'sweet' => 0,
 			'sour' => 0,
 			'bitter' => 0
+		]);
+
+		LogInsert::create([
+			'user_type' => 'user',
+			'user_id' => $userId,
+			'user_email' => $userEmail,
+			'table_name' => 't0501_food',
+			'table_id' => $food->id
 		]);
 
 		$request->session()->flash('food-add-success', 'makanan berhasil di tambahkan');

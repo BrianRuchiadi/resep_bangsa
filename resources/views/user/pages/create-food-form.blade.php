@@ -1,4 +1,7 @@
 @extends('layouts.user.app-main')
+@section('title')
+	Kontribusi Data Makanan
+@endsection
 @section('content')
 <form method="POST" action="{{ url('/kontribusi/data-makanan') }}" enctype="multipart/form-data">
 	{{ csrf_field() }}
@@ -16,6 +19,9 @@
 			<td>Email</td>
 			<td><input class="input" type="text" name="email" placeholder="masukan email" required></td>
 		</tr>
+		@endif
+		@if(Auth::user())
+			<input type="hidden" name="email" value="{{ Auth::user()->email }}">
 		@endif
 		<tr>
 			<td>Nama Makanan</td>

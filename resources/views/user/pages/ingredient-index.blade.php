@@ -1,4 +1,7 @@
 @extends('layouts.user.app-main')
+@section('title')
+	Bahan Makanan
+@endsection
 @section('content')
 <div class="main-image-wrapper column is-hidden-mobile">
 	<div class="ingredient-main-image column">
@@ -62,13 +65,19 @@
 				            			<td><input type="email" id="email" class="input" name="email" onkeyup="checkEmail()" onmouseleave="checkEmail()"></td>
 				           			</tr>
 				           			@endif
+				           			@if(Auth::user())
+				           			<tr>
+				           				<input type="hidden" name="email" value="{{ Auth::user()->email }}">
+				           			</tr>
+				           			@endif
 				           			<tr>
 				         		   		<td></td>
 				            			<td><button type="submit" id="submit-ingredient-report"class="button is-info">Laporkan</button></td>
 					           		</tr>
 					          	</table>
 					        </form>
-					          <!-- Any other Bulma elements you want -->
+					        <button class="modal-close" onclick="closeIngredientReport({{ $ingredient->id }})"></button>
+					        <!-- Any other Bulma elements you want -->
 					    </div>
 					   </div>
 			      </div>

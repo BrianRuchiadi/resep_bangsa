@@ -1,4 +1,7 @@
 @extends('layouts.user.app-main')
+@section('title')
+	Kontribusi Data Bahan Makanan
+@endsection
 @section('content')
 
 
@@ -18,6 +21,9 @@
 			<td>Email</td>
 			<td><input class="input" type="email" name="email" required></td>
 		</tr>
+		@endif
+		@if(Auth::user())
+			<input type="hidden" name="email" value="{{ Auth::user()->email }}">
 		@endif
 		<tr>
 			<td>Nama Bahan</td>

@@ -10,12 +10,35 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Auth;
+use DB;
 
 class PageController extends Controller
 {
 	public function index()
 	{
-		return view('user.pages.index');
+		$randomFood = DB::table('t0501_food')
+                ->inRandomOrder()
+                ->first();
+
+        $randomFoods = DB::table('t0501_food')
+        		->inRandomOrder()
+        		->take(5)
+        		->get();
+
+        $randomIngredient = DB::table('t0401_ingredient')
+        		->inRandomOrder()
+        		->first();
+
+        $randomIngredients = DB::table('t0401_ingredient')
+        		->inRandomOrder()
+        		->take(5)
+        		->get();
+
+		return view('user.pages.index', [
+			'randomFood' => $randomFood,
+			'randomFoods' => $randomFoods,
+			'randomIngredient' => $randomIngredient,
+			'randomIngredients' => $randomIngredients]);
 	}
 	public function showFoodIndex()
 	{

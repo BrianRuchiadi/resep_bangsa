@@ -1,4 +1,7 @@
 @extends('layouts.user.app-main')
+@section('title')
+	Pasar
+@endsection
 @section('content')
 
 <figure class="image is-4by3"> 

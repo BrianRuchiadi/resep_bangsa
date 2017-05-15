@@ -1,4 +1,7 @@
 @extends('layouts.user.app-main')
+@section('title')
+	Makanan
+@endsection
 @section('content')
 <div class="main-image-wrapper column is-hidden-mobile">
 	<div class="food-main-image column">
@@ -13,7 +16,7 @@
 	<div class="product-row column is-3">
 		<div class="product card">
 		  <div class="white card-image" data-name="{{ $food->name }}">
-		  	<i class="fa fa-flag" aria-hidden="true" onclick="openfoodReport({{ $food->id }})"></i>	
+		  	<i class="fa fa-flag" aria-hidden="true" onclick="openFoodReport({{ $food->id }})"></i>	
 		    <figure class="image is-4by3"> 
 		      <img src="{{$food->picture}}" alt="Image">
 		    </figure>
@@ -62,12 +65,16 @@
 				            			<td><input type="email" id="email" class="input" name="email" onkeyup="checkEmail()" onmouseleave="checkEmail()"></td>
 				           			</tr>
 				           			@endif
+				           			@if(Auth::user())
+				           				<input type="hidden" name="email" value="{{ Auth::user()->email }}">
+				           			@endif
 				           			<tr>
 				         		   		<td></td>
-				            			<td><button type="submit" id="submit-food-report"class="button is-info">Laporkan</button></td>
+				            			<td><button type="submit" id="submit-food-report" class="button is-info">Laporkan</button></td>
 					           		</tr>
 					          	</table>
 					        </form>
+					        <button class="modal-close" onclick="closeFoodReport({{ $food->id }})"></button>
 					          <!-- Any other Bulma elements you want -->
 					    </div>
 					   </div>

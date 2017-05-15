@@ -1540,6 +1540,58 @@ blockquote .blockquote-footer {
   }
 }
 
+.index-makanan.columns, .index-bahan-makanan.columns {
+  height: 200px;
+  width: 100%;
+  padding: 0;
+  background-color: #EEEEEE;
+}
+
+.index-makanan.column.is-9, .index-bahan-makanan-menu.column.is-9 {
+  overflow-x: auto;
+}
+
+.index-makanan.column.is-3 figure.image.is-square, .index-bahan-makanan.column.is-3 figure.image.is-square {
+  margin: 0;
+  width: 200px;
+  height: 200px;
+  padding-top: 0;
+  position: relative;
+}
+
+.index-makanan.column.is-3 figure.image.is-square:before, .index-bahan-makanan.column.is-3 figure.image.is-square:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 32px 32px 0;
+  border-style: solid;
+  border-color: #DEB0B0 #fff;
+  z-index: 3;
+}
+
+.index.container.columns.is-multiline.is-fluid {
+  margin: 10px;
+}
+
+.index-makanan.column.is-3, .index-bahan-makanan.column.is-3 {
+  padding: 0px;
+}
+
+.index.image.is-square span, .index-makanan-menu.column.is-3 span, .index-bahan-makanan-menu.column.is-3 span {
+  display: inline-block;
+  position: absolute;
+  color: black;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 150px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  z-index: 2;
+}
+
 form table tr td {
   color: black;
 }

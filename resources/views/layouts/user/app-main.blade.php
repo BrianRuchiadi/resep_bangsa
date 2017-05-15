@@ -244,7 +244,7 @@
 
 			<div class="content column">
 				<div class="page-index column">
-					<h1> Beranda </h1>
+					<h1> @yield('title') </h1>
 				</div>
 
 				<div class="sub-nav column">
