@@ -1548,6 +1548,7 @@ form table tr td {
   margin: 0;
   padding: 0;
   color: white;
+  list-style-type: none;
 }
 
 .is-black {
@@ -1682,7 +1683,19 @@ li {
   text-align: center;
 }
 
-.main-image.column span {
+.ingredient-main-image.column {
+  position: relative;
+  background-image: url(../images/food/bahan.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  -webkit-filter: drop-shadow(1px 16px 20px black);
+          filter: drop-shadow(1px 16px 20px black);
+  text-align: center;
+}
+
+.main-image.column span, .ingredient-main-image span {
   display: inline-block;
   font-family: 'Lobster', cursive;
   height: 100%;
@@ -1694,6 +1707,7 @@ li {
 .card-image span {
   display: inline-block;
   position: absolute;
+  color: black;
   top: 0;
   height: 100%;
   width: 100%;
@@ -1774,12 +1788,43 @@ li {
   font-style: italic;
 }
 
+.success {
+  color: green;
+  font-style: italic;
+}
+
 .form-header {
   background-color: grey;
 }
 
 .form-header h1 {
   color: white;
+}
+
+.white {
+  background-color: white;
+}
+
+.pagination-previous {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.pagination-list {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.pagination-next {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.pagination-list li {
+  margin: 0 auto;
 }
 
 .fa {
@@ -1810,4 +1855,9 @@ li {
   width: 20px;
   color: black;
   font-size: 20px;
+}
+
+.fa.fa-flag {
+  color: red;
+  font-size: 16px;
 }

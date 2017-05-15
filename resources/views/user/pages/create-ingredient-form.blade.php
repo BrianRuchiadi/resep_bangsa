@@ -6,6 +6,23 @@
 	{{ csrf_field() }}
 	<table>
 		<tr>
+			<td colspan="2"><h1> Kontribusi Data Bahan Makanan</h1></td>
+		</tr>
+		@if(count($errors) > 0)
+		<tr>
+			<td colspan="2" class="error">{{ $errors->first() }}</td>
+		</tr>
+		@endif
+		@if(Session::has('success'))
+		<tr>
+			<td colspan="2" class="success">{{ Session::get('success') }}</td>
+		</tr>
+		@endif
+		<tr>
+			<td>Email</td>
+			<td><input class="input" type="email" name="email" required></td>
+		</tr>
+		<tr>
 			<td>Nama Bahan</td>
 			<td><input class="input" type="text" name="ingredient_name" required></td>
 		</tr>

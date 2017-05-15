@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Models\Ingredient;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -16,9 +17,14 @@ class PageController extends Controller
 	{
 		return view('user.pages.food-index');
 	}
-	public function showFoodIngredientIndex()
+	public function showIngredientIndex()
 	{
-		return view('user.pages.food-ingredient-index');
+		$ingredients = Ingredient::where('deleted_at', null)->
+							orderBy('name', 'asc')->
+							paginate(16);
+
+		return view('user.pages.ingredient-index', 
+			['ingredients' => $ingredients]);
 	}
 	public function showMarketIndex()
 	{
