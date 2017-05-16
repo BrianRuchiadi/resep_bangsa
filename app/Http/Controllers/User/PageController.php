@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Models\Ingredient;
 use App\Models\Food;
 use App\Models\FoodTaste;
+use App\Models\foodOverview;
 use App\Models\ReportType;
 use App\Models\Location;
 use App\Http\Controllers\Controller;
@@ -136,12 +137,18 @@ class PageController extends Controller
 		$foodExists = ($food) ? true : false;
 		$foodTaste = false;
 		$foodTasteTotal = 0;
+		$foodPercentage = null;
+		$foodOverview = null;
 
 		if($foodExists){
+			$foodOverview = FoodOverview::where('food_id', $food->id)->first();
 			$foodTaste = FoodTaste::where('food_id', $food->id)->first();
 			$foodTasteTotal = $foodTaste->spicy + $foodTaste->sour + $foodTaste->bitter + $foodTaste->sweet;
+			$foodPercentage['manis'] = $foodTaste->sweet/$foodTasteTotal * 100;
+			$foodPercentage['asam'] = $foodTaste->sour/$foodTasteTotal * 100;
+			$foodPercentage['pahit'] = $foodTaste->bitter/$foodTasteTotal * 100;
+			$foodPercentage['pedas'] = $foodTaste->spicy/$foodTasteTotal * 100;
 		}	
-
 
 		return view('user.pages.food-detail', [
 			'allRegions' => $this->allIndonesiaStates(),
@@ -149,6 +156,8 @@ class PageController extends Controller
 			'reportTypes' => $reportTypes,
 			'foodExists' => $foodExists,
 			'foodTaste' => $foodTaste,
-			'foodTasteTotal' => $foodTasteTotal]);
+			'foodTasteTotal' => $foodTasteTotal,
+			'foodPercentage' => $foodPercentage,
+			'foodOverview' => $foodOverview]);
 	}
 }

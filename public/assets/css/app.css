@@ -1668,6 +1668,10 @@ form table tr td {
   list-style-type: none;
 }
 
+.is-fullwidth {
+  width: 100%;
+}
+
 footer.footer {
   margin-top: 50px;
 }
@@ -2024,7 +2028,8 @@ li {
 
 .sejarah-content.columns.is-block, .rasa-content.columns.is-block, .nutrisi-content.columns.is-block, .resep-content.columns.is-block {
   color: black;
-  width: 600px;
+  width: auto;
+  max-width: 600px;
   height: auto;
   background-color: #EEEEEE;
   overflow-x: auto;
