@@ -1547,7 +1547,7 @@ blockquote .blockquote-footer {
   background-color: transparent;
 }
 
-.index-makanan.column.is-9, .index-bahan-makanan-menu.column.is-9 {
+.index-makanan-menu.column.is-9, .index-bahan-makanan-menu.column.is-9 {
   overflow-x: auto;
 }
 
@@ -2033,7 +2033,7 @@ li {
   height: auto;
   background-color: #EEEEEE;
   overflow-x: auto;
-  margin-left: 5px;
+  padding-left: 3px;
 }
 
 progress .progress {
@@ -2046,12 +2046,19 @@ progress .progress {
 }
 
 .rasa-content.columns.is-block.is-multiline {
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 label.checkbox {
   color: black;
+}
+
+.food.container.columns.is-multiline.is-fluid.is-narrow {
+  height: 250px;
+  width: auto;
+  max-width: 600px;
+  margin-top: 10px;
 }
 
 .fa {

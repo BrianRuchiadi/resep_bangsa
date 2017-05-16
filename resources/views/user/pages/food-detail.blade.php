@@ -9,6 +9,9 @@
 @endsection
 @section('content')
 	@if($foodExists)
+		<div class="food container columns is-multiline is-fluid is-narrow">
+			<img class="image-is3by2" src="{{ url($food->picture) }}"/>
+		</div>
 		<div class="product container columns is-multiline is-fluid is-narrow">
 			<div class="product tabs is-centered is-boxed is-medium">
 			  <ul>
