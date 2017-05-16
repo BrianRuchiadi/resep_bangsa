@@ -59,6 +59,11 @@ class FoodController extends Controller
 		$userId = (Auth::user()) ? Auth::user()->id : null;
 		$userEmail = (Auth::user()) ? Auth::user()->email : $request->input('email');
 
+		$manis = (isset($request->input('rasa')['manis'])) ? 1 : 0;
+		$pahit = (isset($request->input('rasa')['pahit'])) ? 1 : 0;
+		$asam = (isset($request->input('rasa')['asam'])) ? 1 : 0;
+		$pedas = (isset($request->input('rasa')['pedas'])) ? 1 : 0;
+
 		$image = $request->file('food_picture');
 		$imageName = time() . '_' . strtolower($request->input('food_name')) . '.' . $image->getClientOriginalExtension();
 		$destinationPath = resource_path('assets/images/food/');
@@ -80,7 +85,7 @@ class FoodController extends Controller
 			'location_id' => $request->input('food_region')
 		]);
 
-		$foodOverview = FoodOverview::create([
+		FoodOverview::create([
 			'food_id' => $food->id,
 			'overview_1_header' => 'sejarah makanan',
 			'overview_2_header' => 'deskripsi makanan',
@@ -90,10 +95,10 @@ class FoodController extends Controller
 
 		FoodTaste::create([
 			'food_id' => $food->id,
-			'spicy' => 0,
-			'sweet' => 0,
-			'sour' => 0,
-			'bitter' => 0
+			'spicy' => $pedas,
+			'sweet' => $manis,
+			'sour' => $asam,
+			'bitter' => $pahit
 		]);
 
 		LogInsert::create([

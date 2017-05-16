@@ -2045,6 +2045,10 @@ progress .progress {
   margin-bottom: 10px;
 }
 
+label.checkbox {
+  color: black;
+}
+
 .fa {
   color: black;
 }

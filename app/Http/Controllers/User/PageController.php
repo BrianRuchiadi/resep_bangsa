@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Models\Ingredient;
 use App\Models\Food;
+use App\Models\FoodTaste;
 use App\Models\ReportType;
 use App\Models\Location;
 use App\Http\Controllers\Controller;
@@ -131,13 +132,23 @@ class PageController extends Controller
 	{
 		$foodName = str_replace("-"," ", $foodName);
 		$food = Food::where('name', $foodName)->first();
-		$foodExists = ($food) ? true : false;
 		$reportTypes = ReportType::all();
+		$foodExists = ($food) ? true : false;
+		$foodTaste = false;
+		$foodTasteTotal = 0;
+
+		if($foodExists){
+			$foodTaste = FoodTaste::where('food_id', $food->id)->first();
+			$foodTasteTotal = $foodTaste->spicy + $foodTaste->sour + $foodTaste->bitter + $foodTaste->sweet;
+		}	
+
 
 		return view('user.pages.food-detail', [
 			'allRegions' => $this->allIndonesiaStates(),
 			'food' => $food,
 			'reportTypes' => $reportTypes,
-			'foodExists' => $foodExists]);
+			'foodExists' => $foodExists,
+			'foodTaste' => $foodTaste,
+			'foodTasteTotal' => $foodTasteTotal]);
 	}
 }

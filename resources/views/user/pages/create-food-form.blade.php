@@ -37,11 +37,21 @@
 				</select></span></td>
 		</tr>
 		<tr>
+			<td>Rasa Makanan</td>
+			<td><label class="checkbox">
+			      <input type="checkbox" name="rasa[asam]" value="asam">Asam<br/>
+			      <input type="checkbox" name="rasa[manis]" value="manis">Manis<br/>
+			      <input type="checkbox" name="rasa[pedas]" value="pedas">Pedas<br/>
+			      <input type="checkbox" name="rasa[pahit]" value="pahit">Pahit
+			    </label>
+			</td>
+		</tr>
+		<tr>
 			<td>Foto Makanan</td>
 			<td><input class="input" type="file" name="food_picture" accept="image/*" onchange="loadFile(event)" required />
-			<figure class="input image is-4by3">
-				<img id="output"/>
-			</figure>
+					<figure class="input image is-4by3">
+						<img id="output"/>
+					</figure>
 			</td>
 		</tr>
 		<tr>

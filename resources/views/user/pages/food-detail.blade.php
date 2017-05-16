@@ -48,19 +48,19 @@
 			<div class="rasa-content columns is-block is-multiline">
 			<div class="rasa field is-block">
 				<label class="label">Pedas</label>
-				<progress class="pedas progress is-danger" value="15" max="100">15%</progress>
+				<progress class="pedas progress is-danger" value="15" max="100">{{ $foodTaste->spicy }}</progress>
 			</div>
 			<div class="rasa field is-block">
 				<label class="label">Asam</label>
-				<progress class="asam progress is-warning" value="15" max="100">15%</progress>
+				<progress class="asam progress is-warning" value="15" max="100">{{ $foodTaste->sour }}</progress>
 			</div>
 			<div class="rasa field is-block">
 				<label class="label">Manis</label>
-				<progress class="manis progress is-info" value="30" max="100">30%</progress>
+				<progress class="manis progress is-info" value="30" max="100">{{ $foodTaste->sweet }}</progress>
 			</div>
 			<div class="rasa field is-block">
-				<label class="label">Asin</label>
-				<progress class="asin progress is-primary" value="15" max="100">15%</progress>
+				<label class="label">Pahit</label>
+				<progress class="asin progress is-primary" value="15" max="100">{{ $foodTaste->bitter }}</progress>
 			</div>
 		</div>
 
