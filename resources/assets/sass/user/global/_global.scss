@@ -276,4 +276,54 @@ li{
 }
 .header.inquiry.field h1{
 	color : black;
+	font-size : 50px;
+}
+.header.error.inquiry.field h1{
+	color : red;
+	font-style : italic;
+	padding : 0;
+	padding-left : 10px;
+}
+.panel-block{
+	text-transform : capitalize;
+}
+.half-dark{
+	background-color : black;
+	opacity : 0.7;
+	z-index : 2;
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+	line-height : 100px;
+	text-align : center;
+	color : white;
+}
+.mobile.button.is-info{
+	position : absolute;
+}
+.page-index.column h1{
+	text-transform : capitalize;
+}
+.product.tabs.is-centered.is-boxed.is-medium{
+}
+.product.tabs.is-centered.is-boxed.is-medium ul li a span{
+	color : black;
+}
+.sejarah-content.columns.is-block, .rasa-content.columns.is-block, .nutrisi-content.columns.is-block, .resep-content.columns.is-block{
+	color : black;
+	width : 600px;
+	height : auto;
+	background-color : #EEEEEE;
+	overflow-x : auto;
+	margin-left : 5px;
+}
+progress .progress{
+	width : 90%;
+	margin : 0 auto;
+}
+.nutrisi.field.is-block label.label{
+	text-align : center;
+}
+.rasa-content.columns.is-block.is-multiline{
+	margin-top : 0px;
+	margin-bottom : 10px;
 }

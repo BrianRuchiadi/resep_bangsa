@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+	$('.sejarah.column').hide();
+	$('.rasa.column').hide();
+	$('.nutrisi.column').hide();
+	$('.resep.column').hide();
+
+	$('.sejarah-content').show();
+	$('.rasa-content').hide();
+	$('.nutrisi-content').hide()
+	$('.resep-content').hide();
+
+	$('.sejarah-li').addClass('is-active');
+
 	$('.product.card').hover(function(){
 		$(this).css('border', '1px solid #eeeeee');
 	}, function(){
@@ -37,6 +49,55 @@ $(document).ready(function(){
 	$('#submit-ingredient-report').prop('disabled', true);
 
 });
+
+var tab = function(name){
+	switch(name){
+		case 'sejarah':
+			$('.sejarah-li').addClass('is-active');
+			$('.rasa-li').removeClass('is-active');
+			$('.nutrisi-li').removeClass('is-active');
+			$('.resep-li').removeClass('is-active');
+
+			$('.sejarah-content').show();
+			$('.rasa-content').hide();
+			$('.nutrisi-content').hide();
+			$('.resep-content').hide();
+			break;
+		case 'rasa' :
+			$('.sejarah-li').removeClass('is-active');
+			$('.rasa-li').addClass('is-active');
+			$('.nutrisi-li').removeClass('is-active');
+			$('.resep-li').removeClass('is-active');
+
+			$('.sejarah-content').hide();
+			$('.rasa-content').show();
+			$('.nutrisi-content').hide();
+			$('.resep-content').hide();
+			break;
+		case 'nutrisi' :
+			$('.sejarah-li').removeClass('is-active');
+			$('.rasa-li').removeClass('is-active');
+			$('.nutrisi-li').addClass('is-active');
+			$('.resep-li').removeClass('is-active');
+
+			$('.sejarah-content').hide();
+			$('.rasa-content').hide();
+			$('.nutrisi-content').show();
+			$('.resep-content').hide();
+			break;
+		case 'resep' :
+			$('.sejarah-li').removeClass('is-active');
+			$('.rasa-li').removeClass('is-active');
+			$('.nutrisi-li').removeClass('is-active')
+			$('.resep-li').addClass('is-active');
+
+			$('.sejarah-content').hide();
+			$('.rasa-content').hide();
+			$('.nutrisi-content').hide()
+			$('.resep-content').show();
+			break;
+	}
+};
 
 var openIngredientReport = function(relatedId){
 	$('#ingredient_' + relatedId).addClass('is-active');

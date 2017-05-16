@@ -21,7 +21,7 @@ class IngredientController extends Controller
 			'ingredient_name' => 'bail|required|min:3|unique:t0401_ingredient,name',
 			'ingredient_picture' => 'bail|required'
 		], [
-			'email.required' => 'email dibutuhkan untuk verifikasi'
+			'email.required' => 'email dibutuhkan untuk verifikasi',
 			'email.email' => 'format email tidak valid',
 			'ingredient_name.required' => 'nama bahan di butuhkan',
 			'ingredient_name.min' => 'nama bahan minimal 3 huruf',

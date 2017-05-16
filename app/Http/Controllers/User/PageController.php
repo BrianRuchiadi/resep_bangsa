@@ -47,20 +47,40 @@ class PageController extends Controller
 		$foods = Food::where('deleted_at', null)->
 						orderBy('name', 'asc')->
 						paginate(16);
+		$locationExists = true;
+		$foodExists = ($foods->count() > 0) ? true : false;
 		$reportTypes = ReportType::all();
 
 		return view('user.pages.food-index', [
 			'allRegions' => $this->allIndonesiaStates(),
 			'foods' => $foods,
-			'reportTypes' => $reportTypes]);
+			'reportTypes' => $reportTypes,
+			'foodExists' => $foodExists,
+			'locationExists' => $locationExists]);
 	}
 
 	public function showFoodByRegionName($regionName)
 	{
 		$regionName = str_replace("-"," ", $regionName);
-		dd($regionName);
-		dd($regionName);
+		$location = Location::where('name', $regionName)->first();
+		$locationExists = ($location) ? true : false;
+		$foods = null;
+		$foodExists = false;
+
+		if($locationExists){
+			$foods = Food::where('location_id', $location->id)->orderBy('name', 'asc')->paginate(16);
+			$foodExists = ($foods->count() > 0) ? true : false;
+		}
+		$reportTypes = ReportType::all();
+
+		return view('user.pages.food-index', [
+			'allRegions' => $this->allIndonesiaStates(),
+			'foods' => $foods,
+			'reportTypes' => $reportTypes,
+			'foodExists' => $foodExists,
+			'locationExists' => $locationExists]);
 	}
+
 	public function showIngredientIndex()
 	{
 		$ingredients = Ingredient::where('deleted_at', null)->
@@ -105,5 +125,19 @@ class PageController extends Controller
 	{
 		return view('user.pages.request-food-form',[
 			'allRegions' => $this->allIndonesiaStates()]);
+	}
+
+	public function showFoodDetail($foodName)
+	{
+		$foodName = str_replace("-"," ", $foodName);
+		$food = Food::where('name', $foodName)->first();
+		$foodExists = ($food) ? true : false;
+		$reportTypes = ReportType::all();
+
+		return view('user.pages.food-detail', [
+			'allRegions' => $this->allIndonesiaStates(),
+			'food' => $food,
+			'reportTypes' => $reportTypes,
+			'foodExists' => $foodExists]);
 	}
 }

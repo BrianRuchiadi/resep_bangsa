@@ -106,7 +106,7 @@
 		  		<form method="POST" action="{{ url('/inquiry') }}">
 		  			{{ csrf_field() }}
 		  			@if(count($errors) > 0)
-		  			<div class="header inquiry field"><h1>{{ $errors->first() }}</h1></div>
+		  			<div class="header error inquiry field"><h1>*{{ $errors->first() }}</h1></div>
 		  			@endif
 			  		<div class="field">
 					  <label class="label">Nama</label>
@@ -154,6 +154,22 @@
 		    </div>
 		  </div>
 		</footer>
+		@if(Session::has('inquiry-success'))
+		<script>
+		swal({
+		  title: 'Permintaan Berhasil Di Simpan!',
+		  text: '{{ Session::get("inquiry-success") }}',
+		  timer: 2500
+		}).then(
+		  function () {},
+		  // handling the promise rejection
+		  function (dismiss) {
+		    if (dismiss === 'timer') {
+		    }
+		  }
+		)
+		</script>
+		@endif
 		<!-- end of footer -->
 	</div>
 </body>

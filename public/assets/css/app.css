@@ -1600,6 +1600,8 @@ blockquote .blockquote-footer {
   height: 40px;
   padding: 0;
   line-height: 40px;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .header.index-makanan.column.is-3:before, .header.index-bahan-makanan.column.is-3:before {
@@ -1636,6 +1638,23 @@ blockquote .blockquote-footer {
 
 .header.index-bahan-makanan.column.is-9 a button {
   background-color: #05C6C6;
+}
+
+.header.index-bahan-makanan.column.is-3 a {
+  position: relative;
+}
+
+.header.index-bahan-makanan.column.is-3 a button, .header.index-makanan.column.is-3 a button {
+  position: absolute;
+  top: 1px;
+  right: 50px;
+  font-family: "penna";
+  background-color: white;
+  color: #05C688;
+}
+
+.header.index-bahan-makanan.column.is-3 a button {
+  color: #05C6C6;
 }
 
 form table tr td {
@@ -1966,6 +1985,64 @@ li {
 
 .header.inquiry.field h1 {
   color: black;
+  font-size: 50px;
+}
+
+.header.error.inquiry.field h1 {
+  color: red;
+  font-style: italic;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.panel-block {
+  text-transform: capitalize;
+}
+
+.half-dark {
+  background-color: black;
+  opacity: 0.7;
+  z-index: 2;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  color: white;
+}
+
+.mobile.button.is-info {
+  position: absolute;
+}
+
+.page-index.column h1 {
+  text-transform: capitalize;
+}
+
+.product.tabs.is-centered.is-boxed.is-medium ul li a span {
+  color: black;
+}
+
+.sejarah-content.columns.is-block, .rasa-content.columns.is-block, .nutrisi-content.columns.is-block, .resep-content.columns.is-block {
+  color: black;
+  width: 600px;
+  height: auto;
+  background-color: #EEEEEE;
+  overflow-x: auto;
+  margin-left: 5px;
+}
+
+progress .progress {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nutrisi.field.is-block label.label {
+  text-align: center;
+}
+
+.rasa-content.columns.is-block.is-multiline {
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .fa {
@@ -2002,6 +2079,4 @@ li {
   color: black;
   font-size: 16px;
   z-index: 4;
-  position: absolute;
-  top: 5px;
 }

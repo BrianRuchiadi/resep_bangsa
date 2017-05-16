@@ -49,6 +49,8 @@
 	height : 40px;
 	padding : 0;
 	line-height : 40px;
+	text-align : left;
+	padding-left : 10px;
 }
 .header.index-makanan.column.is-3:before, .header.index-bahan-makanan.column.is-3:before {
 	content: "";
@@ -82,3 +84,19 @@
 .header.index-bahan-makanan.column.is-9 a button{
 	background-color : #05C6C6;
 }
+.header.index-bahan-makanan.column.is-3 a{
+	position : relative;
+}
+.header.index-bahan-makanan.column.is-3 a button, .header.index-makanan.column.is-3 a button{
+	position : absolute;
+	top : 1px;
+	right : 50px;
+	font-family: "penna";
+	background-color : white;
+	color : #05C688;
+}
+.header.index-bahan-makanan.column.is-3 a button{
+	color : #05C6C6;
+}
+
+

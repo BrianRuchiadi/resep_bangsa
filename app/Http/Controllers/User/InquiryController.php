@@ -19,13 +19,22 @@ class InquiryController extends Controller
 			'nama' => 'bail|required|min:3|',
 			'pesan' => 'bail|required|min:20'
 		],[
-			'email.required' => 'email dibutuhkan untuk verifikasi',
+			'email.required' => 'email di butuhkan untuk verifikasi',
 			'email.email' => 'format email tidak valid',
-			'nama.required' => 'nama dibutuhkan',
-			'name.min' => 'nama minimal 3 huruf',
+			'nama.required' => 'nama di butuhkan',
+			'name.min' => 'nama membutuhkan minimal 3 huruf',
 			'pesan.required' => 'pesan di butuhkan',
-			'pesan.min' => 'pesan minimal 20 huruf',
+			'pesan.min' => 'pesan membutuhkan minimal 20 huruf',
 		]);
-		dd($request->all());
+
+		Inquiry::create([
+			'inquired_by' => $request->input('email'),
+			'description' => $request->input('nama') . '_' . $request->input('pesan'),
+			'is_read' => 0
+		]);
+
+		$request->session()->flash('inquiry-success', 'permintaan Anda berhasil di simpan');
+		
+		return redirect(url()->previous());
 	}
 }
