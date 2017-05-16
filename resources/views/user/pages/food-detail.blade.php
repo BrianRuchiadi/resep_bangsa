@@ -89,7 +89,11 @@
 		</div>
 
 		<div class="nutrisi-content columns is-block">
-			Nutrisi
+			@if(!$foodNutritionExists)
+				Data belum tersedia
+			@endif
+			@if($foodNutritionExists)
+			@endif
 		</div>
 
 		<div class="resep-content columns is-block">

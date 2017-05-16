@@ -5,7 +5,8 @@ namespace App\Http\Controllers\User;
 use App\Models\Ingredient;
 use App\Models\Food;
 use App\Models\FoodTaste;
-use App\Models\foodOverview;
+use App\Models\FoodOverview;
+use App\Models\FoodNutritionFact;
 use App\Models\ReportType;
 use App\Models\Location;
 use App\Http\Controllers\Controller;
@@ -139,10 +140,14 @@ class PageController extends Controller
 		$foodTasteTotal = 0;
 		$foodPercentage = null;
 		$foodOverview = null;
+		$foodNutritionExists = false;
+		$foodNutrition = null;
 
 		if($foodExists){
 			$foodOverview = FoodOverview::where('food_id', $food->id)->first();
 			$foodTaste = FoodTaste::where('food_id', $food->id)->first();
+			$foodNutritionExists = (FoodNutritionFact::where('food_id', $food->id)->first()) ? true : false;
+			$foodNutrition = (FoodNutritionFact::where('food_id', $food->id)->first()) ? FoodNutrition::where('food_id', $food->id)->get() : false;
 			$foodTasteTotal = $foodTaste->spicy + $foodTaste->sour + $foodTaste->bitter + $foodTaste->sweet;
 			$foodPercentage['manis'] = $foodTaste->sweet/$foodTasteTotal * 100;
 			$foodPercentage['asam'] = $foodTaste->sour/$foodTasteTotal * 100;
@@ -158,6 +163,9 @@ class PageController extends Controller
 			'foodTaste' => $foodTaste,
 			'foodTasteTotal' => $foodTasteTotal,
 			'foodPercentage' => $foodPercentage,
-			'foodOverview' => $foodOverview]);
+			'foodOverview' => $foodOverview,
+			'foodNutritionExists' => $foodNutritionExists,
+			'foodNutrition' => $foodNutrition]);
 	}
+
 }
