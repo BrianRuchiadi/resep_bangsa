@@ -65,6 +65,17 @@ var checkEmail = function(){
 		$('#submit-ingredient-report').prop('disabled', false);
 	}
 }
+var checkEmailForInquiry = function(){
+	var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+	if(!re.test($('#inquiry_email').val())){
+		$('input[type="email"]:focus').css('border-color', 'red');
+		$('.inquiry.button.is-primary').prop('disabled', true);
+	}else{
+		$('input[type="email"]:focus').css('border-color', 'blue');
+		$('.inquiry.button.is-primary').prop('disabled', false);
+	}
+}
 
 var loadFile = function(event){
 	var output = document.getElementById('output');

@@ -9,6 +9,7 @@ use App\Models\Location;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Auth;
 use DB;
 
@@ -35,6 +36,7 @@ class PageController extends Controller
         		->get();
 
 		return view('user.pages.index', [
+			'allRegions' => $this->allIndonesiaStates(),
 			'randomFood' => $randomFood,
 			'randomFoods' => $randomFoods,
 			'randomIngredient' => $randomIngredient,
@@ -47,9 +49,17 @@ class PageController extends Controller
 						paginate(16);
 		$reportTypes = ReportType::all();
 
-		return view('user.pages.food-index', 
-			['foods' => $foods,
-			 'reportTypes' => $reportTypes]);
+		return view('user.pages.food-index', [
+			'allRegions' => $this->allIndonesiaStates(),
+			'foods' => $foods,
+			'reportTypes' => $reportTypes]);
+	}
+
+	public function showFoodByRegionName($regionName)
+	{
+		$regionName = str_replace("-"," ", $regionName);
+		dd($regionName);
+		dd($regionName);
 	}
 	public function showIngredientIndex()
 	{
@@ -58,34 +68,42 @@ class PageController extends Controller
 							paginate(16);
 		$reportTypes = ReportType::all();
 
-		return view('user.pages.ingredient-index', 
-			['ingredients' => $ingredients,
-			 'reportTypes' => $reportTypes]);
+		return view('user.pages.ingredient-index', [
+			'allRegions' => $this->allIndonesiaStates(),
+			'ingredients' => $ingredients,
+			'reportTypes' => $reportTypes]);
 	}
 	public function showMarketIndex()
 	{
-		return view('user.pages.market-index');
+		return view('user.pages.market-index',[
+			'allRegions' => $this->allIndonesiaStates()]);
 	}
 	public function showContactIndex()
 	{
-		return view('user.pages.contact-index');
+		return view('user.pages.contact-index',[
+			'allRegions' => $this->allIndonesiaStates()]);
 	}
 	public function showCreateIngredientForm()
 	{
-		return view('user.pages.create-ingredient-form');
+		return view('user.pages.create-ingredient-form', [
+			'allRegions' => $this->allIndonesiaStates()]);
 	}
 	public function showCreateRecipeForm()
 	{
-		return view('user.pages.create-recipe-form');
+		return view('user.pages.create-recipe-form', [
+			'allRegions' => $this->allIndonesiaStates()]);
 	}
 	public function showCreateFoodForm()
 	{
 		$indonesiaLocations = Location::where('country_id', 1)->get();
 		
-		return view('user.pages.create-food-form', ['locations' => $indonesiaLocations]);
+		return view('user.pages.create-food-form', [
+			'allRegions' => $this->allIndonesiaStates(),
+			'locations' => $indonesiaLocations]);
 	}
 	public function showRequestFoodForm()
 	{
-		return view('user.pages.request-food-form');
+		return view('user.pages.request-food-form',[
+			'allRegions' => $this->allIndonesiaStates()]);
 	}
 }

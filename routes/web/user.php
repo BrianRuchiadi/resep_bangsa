@@ -13,10 +13,12 @@ Route::group(['prefix' => '', 'namespace' => 'User'], function () {
 	Route::get('/kontribusi/resep', 'PageController@showCreateRecipeForm');
 	Route::name('kontribusi-data-makanan')->get('/kontribusi/data-makanan', 'PageController@showCreateFoodForm');
 	Route::name('permintaan-data-makanan')->get('/permintaan/data-makanan', 'PageController@showRequestFoodForm');
+	Route::get('/makanan/{name?}', 'PageController@showFoodByRegionName');
 
 	Route::post('/kontribusi/data-makanan', 'FoodController@createFood');
 	Route::post('/permintaan/data-makanan', 'FoodController@submitRequestFoodForm');
 	Route::post('/kontribusi/bahan-makanan', 'IngredientController@createIngredient');
 	Route::post('/laporan/bahan-makanan', 'ReportController@submitIngredientReport');
+	Route::post('/inquiry', 'InquiryController@submitInquiry');
 
 });

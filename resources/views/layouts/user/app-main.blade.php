@@ -35,210 +35,15 @@
 		<div class="main-content columns">
 			<div class="navigation column is-narrow is-hidden-mobile">
 				<nav class="panel">
-					<a class="panel-block is-active">
+					@foreach($allRegions as $region)
+					<a class="panel-block" href="{{ url('makanan/' . str_replace(" ","-",$region->name) .'') }}">
 						<span class="panel-icon">
 							<i class="fa fa-map"></i>
 						</span>
-						Nanggro Aceh Darussalam
+						{{ $region->name }}
 					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sumatera Utara
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sumatera Barat
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Riau
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Kepulauan Riau
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Jambi
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sumatera Selatan
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Bangka Belitung
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Bengkulu
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Lampung
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						DKI Jakarta
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Jawa Barat
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Banten
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Jawa Tengah
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Daerah Istimewa Yogyakarta
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Jawa Timur
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Bali
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Nusa Tenggara Barat
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Nusa Tenggara Timur
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Kalimantan Barat
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Kalimantan Tengah
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Kalimantan Selatan
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Kalimantan Timur
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Kalimantan Utara
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sulawesi Utara
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sulawesi Barat
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sulawesi Tengah
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sulawesi Tenggara
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Sulawesi Selatan
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Gorontalo
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Maluku
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Maluku Utara
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Papua Barat
-					</a>
-					<a class="panel-block">
-						<span class="panel-icon">
-							<i class="fa fa-map"></i>
-						</span>
-						Papua
-					</a>
+					@endforeach
+					
 				</nav>
 			</div>
 
@@ -296,6 +101,48 @@
 		<!-- start of footer -->
 		<footer class="footer">
 		  <div class="footer-wrapper container is-multiline">
+		  	<div class="footer-inquiry is-fullwidth">
+		  		<div class="header inquiry field"><h1>Hubungi kami</h1></div>
+		  		<form method="POST" action="{{ url('/inquiry') }}">
+		  			{{ csrf_field() }}
+		  			@if(count($errors) > 0)
+		  			<div class="header inquiry field"><h1>{{ $errors->first() }}</h1></div>
+		  			@endif
+			  		<div class="field">
+					  <label class="label">Nama</label>
+					  <p class="control has-icons-left has-icons-right">
+					    <input class="input" type="text" placeholder="Nama" name="nama">
+					    <span class="icon is-small is-left">
+					      <i class="fa fa-user"></i>
+					    </span>
+					  </p>
+					</div>
+
+					<div class="field">
+					  <label class="label">Email</label>
+					  <p class="control has-icons-left has-icons-right">
+					    <input class="input" type="email" placeholder="Email" name="email" id="inquiry_email" onkeyup="checkEmailForInquiry()" onmouseleave="checkEmailForInquiry()">
+					    <span class="icon is-small is-left">
+					      <i class="fa fa-envelope"></i>
+					    </span>
+					  </p>
+					</div>
+
+					<div class="field">
+					  <label class="label">Pesan</label>
+					  <p class="control">
+					    <textarea class="textarea" placeholder="Pesan" name="pesan"></textarea>
+					  </p>
+					</div>
+
+					<div class="field is-grouped">
+					  <p class="control">
+					    <button class="inquiry button is-primary">Submit</button>
+					  </p>
+					</div>
+				</form>
+
+		  	</div>
 		    <div class="footer-link column is-fullwidth"></div>
 		    <div class="footer-content column is-fullwidth"></div>
 		    <div class="footer-social-media column is-fullwidth has-text-centered">

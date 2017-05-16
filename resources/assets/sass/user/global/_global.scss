@@ -4,6 +4,9 @@
 	color : white;
 	list-style-type : none;
 }
+footer.footer{
+	margin-top : 50px;
+}
 .is-black{
 	color : black;
 }
@@ -32,7 +35,10 @@ footer.footer{
 	font-size : 40px;
 	color : black;
 }
-
+.field{
+	width : 90%;
+	margin : 0 auto;
+}
 .in-box{
 	position : absolute;
 	z-index: 2;
@@ -259,4 +265,15 @@ li{
 }
 .food.content h3{
 	text-align : center;
+}
+.header.inquiry.field{
+	text-align : center;
+}
+.footer-inquiry.is-fullwidth{
+	margin : 0 auto;
+	color : white;
+	padding : 5px;
+}
+.header.inquiry.field h1{
+	color : black;
 }

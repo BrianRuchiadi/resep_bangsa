@@ -16,7 +16,13 @@
 	
 </div>
 <div class="index container columns is-multiline is-fluid">
-	<div class="index-makanan container columns is-fullwidth is-fluid">
+	<div class="index-makanan container columns is-fullwidth is-fluid is-multiline">
+		<div class="header index-makanan column is-3">
+			Makanan
+		</div>
+		<div class="header index-makanan column is-9">
+			<a href="#"><button class="button is-info">Lihat lengkap</button></a>
+		</div>
 		<div class="index-makanan column is-3">
 			<figure class="index image is-square" data-name="{{$randomFood->name}}">
 			  <a href="#"><img src="{{ url($randomFood->picture) }}"/></a>
@@ -31,9 +37,17 @@
 				@endforeach
 			</div>
 		</div>
-	</div>	
+	</div>
+</div>	
 
-	<div class="index-bahan-makanan container columns is-fullwidth is-fluid">
+<div class="ingredient index container columns is-multiline is-fluid">
+	<div class="index-bahan-makanan container columns is-fullwidth is-fluid is-multiline">
+		<div class="header index-bahan-makanan column is-3">
+			Bahan Makanan
+		</div>
+		<div class="header index-bahan-makanan column is-9">
+			<a href="#"><button class="button is-info">Lihat lengkap</button></a>
+		</div>
 		<div class="index-bahan-makanan column is-3">
 			<figure class="index image is-square" data-name="{{$randomIngredient->name}}">
 			  <a href="#"><img src="{{ url($randomIngredient->picture) }}"/></a>
@@ -49,7 +63,6 @@
 			</div>
 		</div>
 	</div>	
-
 </div>
 
 @endsection

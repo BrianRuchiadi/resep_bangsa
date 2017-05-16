@@ -1544,7 +1544,7 @@ blockquote .blockquote-footer {
   height: 200px;
   width: 100%;
   padding: 0;
-  background-color: #EEEEEE;
+  background-color: transparent;
 }
 
 .index-makanan.column.is-9, .index-bahan-makanan-menu.column.is-9 {
@@ -1552,22 +1552,11 @@ blockquote .blockquote-footer {
 }
 
 .index-makanan.column.is-3 figure.image.is-square, .index-bahan-makanan.column.is-3 figure.image.is-square {
-  margin: 0;
+  margin: 0 auto;
   width: 200px;
   height: 200px;
   padding-top: 0;
   position: relative;
-}
-
-.index-makanan.column.is-3 figure.image.is-square:before, .index-bahan-makanan.column.is-3 figure.image.is-square:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-width: 0 32px 32px 0;
-  border-style: solid;
-  border-color: #DEB0B0 #fff;
-  z-index: 3;
 }
 
 .index.container.columns.is-multiline.is-fluid {
@@ -1576,6 +1565,14 @@ blockquote .blockquote-footer {
 
 .index-makanan.column.is-3, .index-bahan-makanan.column.is-3 {
   padding: 0px;
+}
+
+.index-makanan.column.is-3, .index-makanan-menu.column.is-9 {
+  background-color: #CCF5D8;
+}
+
+.index-bahan-makanan.column.is-3, .index-bahan-makanan-menu.column.is-9 {
+  background-color: #CCF5F1;
 }
 
 .index.image.is-square span, .index-makanan-menu.column.is-3 span, .index-bahan-makanan-menu.column.is-3 span {
@@ -1592,6 +1589,55 @@ blockquote .blockquote-footer {
   z-index: 2;
 }
 
+.ingredient.index.container.columns.is-multiline.is-fluid {
+  margin-top: 80px;
+}
+
+.header.index-makanan.column.is-3, .header.index-bahan-makanan.column.is-3 {
+  position: relative;
+  background-color: #05C688;
+  color: white;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+}
+
+.header.index-makanan.column.is-3:before, .header.index-bahan-makanan.column.is-3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 40px 40px 0;
+  border-style: solid;
+  border-color: #05C688 #FFFFFF;
+  z-index: 3;
+}
+
+.header.index-bahan-makanan.column.is-3 {
+  background-color: #05C6C6;
+}
+
+.header.index-bahan-makanan.column.is-3:before {
+  border-color: #05C6C6 #FFFFFF;
+}
+
+.header.index-makanan.column.is-9, .header.index-bahan-makanan.column.is-9 {
+  background-color: white;
+  position: relative;
+}
+
+.header.index-makanan.column.is-9 a button, .header.index-bahan-makanan.column.is-9 a button {
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  font-family: "penna";
+  background-color: #05C688;
+}
+
+.header.index-bahan-makanan.column.is-9 a button {
+  background-color: #05C6C6;
+}
+
 form table tr td {
   color: black;
 }
@@ -1601,6 +1647,10 @@ form table tr td {
   padding: 0;
   color: white;
   list-style-type: none;
+}
+
+footer.footer {
+  margin-top: 50px;
 }
 
 .is-black {
@@ -1635,6 +1685,11 @@ footer.footer {
   font-family: 'Lobster', cursive;
   font-size: 40px;
   color: black;
+}
+
+.field {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .in-box {
@@ -1897,6 +1952,20 @@ li {
 
 .food.content h3 {
   text-align: center;
+}
+
+.header.inquiry.field {
+  text-align: center;
+}
+
+.footer-inquiry.is-fullwidth {
+  margin: 0 auto;
+  color: white;
+  padding: 5px;
+}
+
+.header.inquiry.field h1 {
+  color: black;
 }
 
 .fa {
