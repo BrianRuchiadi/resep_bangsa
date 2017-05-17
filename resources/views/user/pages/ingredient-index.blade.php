@@ -16,7 +16,6 @@
 	<div class="product-row column is-3">
 		<div class="product card">
 		  <div class="white card-image" data-name="{{ $ingredient->name }}">
-		  	<i class="fa fa-flag" aria-hidden="true" onclick="openIngredientReport({{ $ingredient->id }})"></i>	
 		    <figure class="image is-4by3"> 
 		      <img src="{{$ingredient->picture}}" alt="Image">
 		    </figure>
@@ -29,6 +28,7 @@
 				      <br>
 				      <small>@php echo substr($ingredient->updated_at,0,10) @endphp</small>
 				      <br>
+				      <i class="fa fa-flag" aria-hidden="true" onclick="openIngredientReport({{ $ingredient->id }})"></i>	
 				      				      
 				      <div class="report modal" id="ingredient_{{ $ingredient->id }}">
 				        <div class="report modal-background"></div>

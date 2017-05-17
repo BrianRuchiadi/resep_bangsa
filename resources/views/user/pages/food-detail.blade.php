@@ -125,18 +125,18 @@
 	        	<form method="post" action="{{ url('/kontribusi/rasa-makanan') }}">
 	         	{{ csrf_field() }}
 	          		<table>
-	           			@if(count($errors) > 0)
-	           			<tr>
-	          		  		<td colspan="2" class="error">{{ $errors->first() }}</td>
-	           			</tr>
-	           			@endif
 	           			<tr>
 	           				<td colspan="2" id="voting_selection"><h1 class="has-text-centered is-fullwidth"></h1></td>
 	           			</tr>
 				        @if(!Auth::user())
+				        @if(count($errors) > 0)
+	           			<tr>
+	          		  		<td colspan="2" class="error">{{ $errors->first() }}</td>
+	           			</tr>
+	           			@endif
 				        <tr>
 				            <td>Email</td>
-	            			<td><input type="email" id="email" class="input" name="email"></td>
+	            			<td><input type="email" id="email" class="input" name="email" onmouseleave="checkEmailForVoting()" onkeyup="checkEmailForVoting()"></td>
 	           			</tr>
 	           			@endif
 	           			@if(Auth::user())
@@ -155,17 +155,10 @@
 		</div>
 	@if(Session::has('vote-success'))
 	<script>
-		swal({
-		  title: 'Vote Berhasil!',
-		  text: '{{ Session::get("vote-success") }}',
-		  timer: 2500
-		}).then(
-		  function () {},
-		  // handling the promise rejection
-		  function (dismiss) {
-		    if (dismiss === 'timer') {
-		    }
-		  }
+		swal(
+		  'Terima Kasih!',
+		  'Vote Anda Berhasil Di Rekam',
+		  'success'
 		)
 	</script>
 	@endif

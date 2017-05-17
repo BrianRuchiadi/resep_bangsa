@@ -47,7 +47,8 @@ $(document).ready(function(){
 	});
 
 	$('#submit-ingredient-report').prop('disabled', true);
-
+	$('.inquiry.button.is-primary').prop('disabled', true);
+	$('#submit-food-voting').prop('disabled', true);
 });
 
 var tab = function(name){
@@ -143,7 +144,7 @@ var checkEmail = function(){
 		$('input[type="email"]:focus').css('border-color', 'blue');
 		$('#submit-ingredient-report').prop('disabled', false);
 	}
-}
+};
 var checkEmailForInquiry = function(){
 	var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -154,7 +155,19 @@ var checkEmailForInquiry = function(){
 		$('input[type="email"]:focus').css('border-color', 'blue');
 		$('.inquiry.button.is-primary').prop('disabled', false);
 	}
-}
+};
+
+var checkEmailForVoting = function(){
+	var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+	if(!re.test($('#email').val())){
+		$('input[type="email"]:focus').css('border-color', 'red');
+		$('#submit-food-voting').prop('disabled', true);
+	}else{
+		$('input[type="email"]:focus').css('border-color', 'blue');
+		$('#submit-food-voting').prop('disabled', false);
+	}
+};
 
 var loadFile = function(event){
 	var output = document.getElementById('output');

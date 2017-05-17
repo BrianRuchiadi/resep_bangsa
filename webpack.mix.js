@@ -87,6 +87,7 @@ mix.combine([
 	'sweetalert2/dist/sweetalert2.min.css',
 	'font-awesome/css/font-awesome.min.css',
 	'bulma/css/bulma.css',
+	'easy-autocomplete/dist/easy-autocomplete.min.css'
    // '/css/style.css', 
    // '/css/style-responsive.css'
 ].map(function(p){
@@ -119,6 +120,7 @@ mix.combine([
 	'jquery/dist/jquery.min.js', 
 	'bootstrap/dist/js/bootstrap.min.js',
 	'sweetalert2/dist/sweetalert2.min.js',
+	'easy-autocomplete/dist/jquery.easy-autocomplete.min.js'
 ].map(function(p){ 
 	return path.node_modules + p; 
 

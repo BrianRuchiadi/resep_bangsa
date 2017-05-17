@@ -65,7 +65,7 @@
 				<div class="search-bar column">
 					<p class="search-input control">
 						<i class="in-box fa fa-search" aria-hidden="true"></i>
-					    <input class="input" type="text" placeholder="cari makanan">
+					    <input id="provider-json" class="input" type="text" placeholder="cari makanan" >
 					</p>
 				</div>
 				<div class="quick-access-button column">
