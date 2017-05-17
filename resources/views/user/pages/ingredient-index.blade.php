@@ -30,7 +30,8 @@
 					      <small>@php echo substr($ingredient->updated_at,0,10) @endphp</small>
 					      <br>
 					      <i class="fa fa-flag" aria-hidden="true" onclick="openIngredientReport({{ $ingredient->id }})"></i>	
-					      				      
+					      <i class="fa fa-pencil-square-o" aria-hidden="true" onclick="openEditIngredient({{$ingredient->id}})"></i>
+					      <!-- report -->	      
 					      <div class="report modal" id="ingredient_{{ $ingredient->id }}">
 					        <div class="report modal-background"></div>
 					        <div class="report modal-content">
@@ -77,10 +78,56 @@
 						           		</tr>
 						          	</table>
 						        </form>
-						        <button class="modal-close" onclick="closeIngredientReport({{ $ingredient->id }})"></button>
+						        <button class="report modal-close" onclick="closeIngredientReport({{ $ingredient->id }})"></button>
 						        <!-- Any other Bulma elements you want -->
 						    </div>
 						   </div>
+						   <!-- end of report -->
+						   <!-- edit ingredient -->
+						   <div class="ingredient modal" id="ingredient_{{ $ingredient->id }}_edit">
+					        <div class="ingredient modal-background"></div>
+					        <div class="ingredient modal-content">
+					        	<form method="post" action="{{ url('/laporan/bahan-makanan') }}">
+					         	{{ csrf_field() }}
+					          		<table>
+					           			<tr>
+					            			<td colspan="2"><h1> Edit Bahan Makanan "{{ $ingredient->name }}"</h1></td>
+					           			</tr>
+					           			@if(count($errors) > 0)
+					           			<tr>
+					          		  		<td colspan="2" class="error">{{ $errors->first() }}</td>
+					           			</tr>
+					           			@endif
+					           			<tr>
+					            			<td>Nama Makanan</td>
+					            			<td><input class="input" type="text" name="ingredient_name" value="{{ $ingredient->name }}"></td>
+					           			</tr>
+					           			<tr>
+								            <td>Penjelasan</td>
+								            <td><textarea class="textarea" name="penjelasan_edit" id="deskripsi_laporan"></textarea></td>
+								        </tr>
+								        @if(!Auth::user())
+								        <tr>
+								            <td>Email</td>
+					            			<td><input type="email" id="email" class="input" name="email" onkeyup="checkEmail()" onmouseleave="checkEmail()"></td>
+					           			</tr>
+					           			@endif
+					           			@if(Auth::user())
+					           			<tr>
+					           				<input type="hidden" name="email" value="{{ Auth::user()->email }}">
+					           			</tr>
+					           			@endif
+					           			<tr>
+					         		   		<td></td>
+					            			<td><button type="submit" id="submit-ingredient-report"class="button is-info">Laporkan</button></td>
+						           		</tr>
+						          	</table>
+						        </form>
+						        <button class="ingredient modal-close" onclick="closeEditIngredient({{ $ingredient->id }})"></button>
+						        <!-- Any other Bulma elements you want -->
+						    </div>
+						   </div>
+						   <!-- end of edit ingredient -->
 				      </div>
 			    </div>
 			  </div>
@@ -151,7 +198,8 @@
 						      <small>@php echo substr($ingredient->updated_at,0,10) @endphp</small>
 						      <br>
 						      <i class="fa fa-flag" aria-hidden="true" onclick="openIngredientReport({{ $ingredient->id }})"></i>	
-						      				      
+						      <i class="fa fa-pencil-square-o" aria-hidden="true" onclick="openEditIngredient({{$ingredient->id}})"></i>
+						      <!-- report -->				      
 						      <div class="report modal" id="ingredient_{{ $ingredient->id }}">
 						        <div class="report modal-background"></div>
 						        <div class="report modal-content">
@@ -203,12 +251,58 @@
 							    </div>
 							   </div>
 					      </div>
+					      <!-- end of report -->
+					      <!-- ingredient edit -->
+					      <div class="ingredient modal" id="ingredient_{{ $ingredient->id }}_edit">
+					        <div class="ingredient modal-background"></div>
+					        <div class="ingredient modal-content">
+					        	<form method="post" action="{{ url('/laporan/bahan-makanan') }}">
+					         	{{ csrf_field() }}
+					          		<table>
+					           			<tr>
+					            			<td colspan="2"><h1> Edit Bahan Makanan "{{ $ingredient->name }}"</h1></td>
+					           			</tr>
+					           			@if(count($errors) > 0)
+					           			<tr>
+					          		  		<td colspan="2" class="error">{{ $errors->first() }}</td>
+					           			</tr>
+					           			@endif
+					           			<tr>
+					            			<td>Nama Makanan</td>
+					            			<td><input class="input" type="text" name="ingredient_name" value="{{ $ingredient->name }}"></td>
+					           			</tr>
+					           			<tr>
+								            <td>Penjelasan</td>
+								            <td><textarea class="textarea" name="penjelasan_edit" id="deskripsi_laporan"></textarea></td>
+								        </tr>
+								        @if(!Auth::user())
+								        <tr>
+								            <td>Email</td>
+					            			<td><input type="email" id="email" class="input" name="email" onkeyup="checkEmail()" onmouseleave="checkEmail()"></td>
+					           			</tr>
+					           			@endif
+					           			@if(Auth::user())
+					           			<tr>
+					           				<input type="hidden" name="email" value="{{ Auth::user()->email }}">
+					           			</tr>
+					           			@endif
+					           			<tr>
+					         		   		<td></td>
+					            			<td><button type="submit" id="submit-ingredient-report"class="button is-info">Laporkan</button></td>
+						           		</tr>
+						          	</table>
+						        </form>
+						        <button class="ingredient modal-close" onclick="closeEditIngredient({{ $ingredient->id }})"></button>
+						        <!-- Any other Bulma elements you want -->
+						    </div>
+						   </div>
+						   <!-- end of edit ingredient -->
 				    </div>
 				  </div>
 				</div>
 			</div>
-		</div>
 		@endif
+		</div>
 	@endif
 
 @endsection

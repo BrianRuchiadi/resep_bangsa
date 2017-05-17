@@ -182,6 +182,14 @@ var openIngredientReport = function(relatedId){
 	$('#ingredient_' + relatedId).addClass('is-active');
 };
 
+var openEditIngredient = function(relatedId){
+	$('#ingredient_' + relatedId + '_edit').addClass('is-active');
+};
+
+var closeEditIngredient = function(relatedId){
+	$('#ingredient_' + relatedId + '_edit').removeClass('is-active');
+};
+
 var closeIngredientReport = function(relatedId){
 	$('#ingredient_' + relatedId).removeClass('is-active');
 };

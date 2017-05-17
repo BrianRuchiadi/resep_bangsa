@@ -86,12 +86,12 @@
 						kontribusi data makanan
 					</button>
 					</a>
-					<a href="{{ url('kontribusi/resep') }}">
+					<!-- <a href="{{ url('kontribusi/resep') }}">
 					<button class="button is-success">
 						<i class="fa fa-plus" aria-hidden="true"></i>
 						kontribusi resep
 					</button>
-					</a>
+					</a> -->
 					<a href="{{ url('kontribusi/bahan-makanan') }}">
 					<button class="button is-warning">
 						<i class="fa fa-plus" aria-hidden="true"></i>
