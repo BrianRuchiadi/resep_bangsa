@@ -107,6 +107,24 @@ var closeIngredientReport = function(relatedId){
 	$('#ingredient_' + relatedId).removeClass('is-active');
 };
 
+var openVotingModal = function(vote){
+	var value = 0;
+	switch(vote){
+		case 'pedas' : value = 1; break;
+		case 'manis' : value = 2; break;
+		case 'asam' : value = 3; break;
+		case 'pahit': value = 4; break;
+	}
+	$('#voting').addClass('is-active');
+	$('#voting_selection h1').html('');
+	$('#voting_selection h1').html('Vote Anda Adalah ' + vote);
+	$('#vote_select').val(value);
+};
+
+var closeVotingModal = function(){
+	$('#voting').removeClass('is-active');
+};
+
 var openFoodReport = function(relatedId){
 	$('#food_' + relatedId).addClass('is-active');
 };

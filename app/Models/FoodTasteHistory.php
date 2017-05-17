@@ -9,7 +9,7 @@ class FoodTasteHistory extends Model
 {
     use SoftDeletes;
 
-    public $table = 't0510_food_like_history';
+    public $table = 't0510_food_taste_history';
     public $timestamps = true;
 
     /**

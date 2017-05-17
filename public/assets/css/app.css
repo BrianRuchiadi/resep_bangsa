@@ -2096,3 +2096,9 @@ label.checkbox {
   font-size: 16px;
   z-index: 4;
 }
+
+.fa.fa-thumbs-up {
+  margin-top: -5px;
+  margin-left: 10px;
+  color: orange;
+}

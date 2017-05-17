@@ -19,6 +19,7 @@ Route::group(['prefix' => '', 'namespace' => 'User'], function () {
 	Route::post('/kontribusi/data-makanan', 'FoodController@createFood');
 	Route::post('/permintaan/data-makanan', 'FoodController@submitRequestFoodForm');
 	Route::post('/kontribusi/bahan-makanan', 'IngredientController@createIngredient');
+	Route::post('/kontribusi/rasa-makanan', 'FoodTasteController@submitFoodTasteVote');
 	Route::post('/laporan/bahan-makanan', 'ReportController@submitIngredientReport');
 	Route::post('/inquiry', 'InquiryController@submitInquiry');
 

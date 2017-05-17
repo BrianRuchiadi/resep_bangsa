@@ -70,19 +70,31 @@
 			<div class="rasa-content columns is-block is-multiline">
 			<div class="rasa field is-block">
 				<label class="label">Pedas</label>
-				<progress class="pedas progress is-danger" value="{{ $foodPercentage['pedas'] }}" max="100">{{ $foodTaste->spicy }}</progress>
+				<div class="columns">
+					<progress class="pedas progress is-danger" value="{{ $foodPercentage['pedas'] }}" max="100"></progress> 
+					<i class="fa fa-thumbs-up" onclick="openVotingModal('pedas')"></i>
+				</div>
 			</div>
 			<div class="rasa field is-block">
 				<label class="label">Asam</label>
-				<progress class="asam progress is-warning" value="{{ $foodPercentage['asam'] }}" max="100">{{ $foodTaste->sour }}</progress>
+				<div class="columns">
+					<progress class="asam progress is-warning" value="{{ $foodPercentage['asam'] }}" max="100"></progress>
+					<i class="fa fa-thumbs-up" onclick="openVotingModal('asam')"></i>
+				</div>
 			</div>
 			<div class="rasa field is-block">
 				<label class="label">Manis</label>
-				<progress class="manis progress is-info" value="{{ $foodPercentage['manis'] }}" max="100">{{ $foodTaste->sweet }}</progress>
+				<div class="columns">
+					<progress class="manis progress is-info" value="{{ $foodPercentage['manis'] }}" max="100"></progress>
+					<i class="fa fa-thumbs-up" onclick="openVotingModal('manis')"></i>
+				</div>
 			</div>
 			<div class="rasa field is-block">
 				<label class="label">Pahit</label>
-				<progress class="asin progress is-primary" value="{{ $foodPercentage['pahit'] }}" max="100">{{ $foodTaste->bitter }}</progress>
+				<div class="columns">
+					<progress class="asin progress is-primary" value="{{ $foodPercentage['pahit'] }}" max="100"></progress>
+					<i class="fa fa-thumbs-up" onclick="openVotingModal('pahit')"></i>
+				</div>
 			</div>
 		</div>
 
@@ -90,15 +102,73 @@
 
 		<div class="nutrisi-content columns is-block">
 			@if(!$foodNutritionExists)
-				Data belum tersedia
+				<p class="has-text-centered is-fullwidth is-black">Data belum tersedia</p>
 			@endif
 			@if($foodNutritionExists)
+			<div class="rasa-content columns is-block is-multiline">
+				<div class="rasa field is-block">
+					<label class="label">Pedas</label>
+					<progress class="pedas progress is-danger" value="{{ $foodPercentage['pedas'] }}" max="100">{{ $foodTaste->spicy }}</progress>
+				</div>
+			</div>
 			@endif
 		</div>
 
 		<div class="resep-content columns is-block">
 			Resep
 		</div>
+
+		<!-- voting modal -->
+		<div class="voting modal" id="voting">
+	        <div class="voting modal-background"></div>
+	        <div class="voting modal-content">
+	        	<form method="post" action="{{ url('/kontribusi/rasa-makanan') }}">
+	         	{{ csrf_field() }}
+	          		<table>
+	           			@if(count($errors) > 0)
+	           			<tr>
+	          		  		<td colspan="2" class="error">{{ $errors->first() }}</td>
+	           			</tr>
+	           			@endif
+	           			<tr>
+	           				<td colspan="2" id="voting_selection"><h1 class="has-text-centered is-fullwidth"></h1></td>
+	           			</tr>
+				        @if(!Auth::user())
+				        <tr>
+				            <td>Email</td>
+	            			<td><input type="email" id="email" class="input" name="email"></td>
+	           			</tr>
+	           			@endif
+	           			@if(Auth::user())
+	           				<input type="hidden" name="email" value="{{ Auth::user()->email }}">
+	           			@endif
+	           			<tr>
+	         		   		<td><input type="hidden" name="vote" id="vote_select" value="0">
+	         		   			<input type="hidden" name="food" value="{{ $food->id }}"></td>
+	            			<td><button type="submit" id="submit-food-voting" class="button is-info">Benar</button></td>
+		           		</tr>
+		          	</table>
+		        </form>
+		        <button class="modal-close" onclick="closeVotingModal()"></button>
+		          <!-- Any other Bulma elements you want -->
+		    </div>
+		</div>
+	@if(Session::has('vote-success'))
+	<script>
+		swal({
+		  title: 'Vote Berhasil!',
+		  text: '{{ Session::get("vote-success") }}',
+		  timer: 2500
+		}).then(
+		  function () {},
+		  // handling the promise rejection
+		  function (dismiss) {
+		    if (dismiss === 'timer') {
+		    }
+		  }
+		)
+	</script>
+	@endif
 	@endif
 	@if(!$foodExists)
 	Not exist
