@@ -79,7 +79,8 @@ var foodSearch = function(){
 
 		results.forEach(function(value){
 			dashedValue = value.replace(" ", "-");
-			$('#search-result').append('<a href="' + dashedValue +  '" class="search-output"><li class="search-output">' + value + '</li></a>');
+			fullValue = "local.resepbangsa.com/makanan/detail/" + dashedValue;
+			$('#search-result').append('<a href="' + fullValue +  '" class="search-output"><li class="search-output">' + value + '</li></a>');
 		});
 	});
 
