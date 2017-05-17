@@ -65,9 +65,17 @@
 				<div class="search-bar column">
 					<p class="search-input control">
 						<i class="in-box fa fa-search" aria-hidden="true"></i>
-					    <input class="input" type="text" placeholder="cari makanan" id="search-food" onkeyup="foodSearch()">
-					    <ul class="search container is-hidden" id="search-result">
-					    </ul>
+						@if(!Request::is('bahan-makanan'))
+							<input class="input" type="text" placeholder="cari makanan" id="search-food" onkeyup="foodSearch()" >
+						    <ul class="search container is-hidden" id="search-result">
+							    <a href="#"><li><i class="fa fa-times" onclick="stopFoodSearch()"></i></li></a>
+						    </ul>
+						@else
+							<input class="input" type="text" placeholder="cari bahan makanan" id="search-ingredient" onkeyup="ingredientSearch()" >
+						    <ul class="search container is-hidden" id="search-result">
+						    	<a href="#"><li><i class="fa fa-times" onclick="stopIngredientSearch()"></i></li></a>
+						    </ul>
+						@endif
 
 					</p>
 				</div>

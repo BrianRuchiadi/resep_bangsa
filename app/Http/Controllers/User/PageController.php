@@ -84,17 +84,37 @@ class PageController extends Controller
 			'locationExists' => $locationExists]);
 	}
 
+	public function showIngredientByName($ingredientName)
+	{
+		$ingredientName = str_replace("-"," ", $ingredientName);
+		$ingredient = Ingredient::where('name', $ingredientName)->first();
+		$ingredientExists = ($ingredient) ? true : false;
+		$reportTypes = ReportType::all();
+		$type = 'search';
+		
+		return view('user.pages.ingredient-index', [
+			'allRegions' => $this->allIndonesiaStates(),
+			'ingredient' => $ingredient,
+			'reportTypes' => $reportTypes,
+			'ingredientExists' => $ingredientExists,
+			'type' => $type]);
+	}
+
 	public function showIngredientIndex()
 	{
 		$ingredients = Ingredient::where('deleted_at', null)->
 							orderBy('name', 'asc')->
 							paginate(16);
 		$reportTypes = ReportType::all();
+		$ingredientExists = true;
+		$type = 'all';
 
 		return view('user.pages.ingredient-index', [
 			'allRegions' => $this->allIndonesiaStates(),
 			'ingredients' => $ingredients,
-			'reportTypes' => $reportTypes]);
+			'reportTypes' => $reportTypes,
+			'ingredientExists' => $ingredientExists,
+			'type' => $type]);
 	}
 	public function showMarketIndex()
 	{

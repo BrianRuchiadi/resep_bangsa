@@ -70,7 +70,7 @@ var foodSearch = function(){
 
 		});
 
-		$('.search.container.is-hidden').addClass('is-hidden');
+		$('.search.container').addClass('is-hidden');
 
 		if(!results.length > 0){ return; }
 
@@ -85,6 +85,49 @@ var foodSearch = function(){
 	});
 
 };
+
+var ingredientSearch = function(){
+	var input = "/(" + $('#search-ingredient').val() + ")/g";
+	var ingredientRegex = new RegExp($('#search-ingredient').val(), "i");
+	var results = [];
+
+	$('.search.container.is-hidden').removeClass('is-hidden');
+
+	$.getJSON('/assets/json/bahan.json', function(data){
+		$.each(data, function(i, bahan) {
+		 	var search = ingredientRegex.test(bahan.name);
+
+		 	if(results.length < 6){
+		 		if(search){
+		 			results.push(bahan.name);
+		 		}
+		 	}
+
+		});
+
+		$('.search.container').addClass('is-hidden');
+
+		if(!results.length > 0){ return; }
+
+		$('.search-output').remove();
+		$('.search.container.is-hidden').removeClass('is-hidden');
+
+		results.forEach(function(value){
+			dashedValue = value.replace(" ", "-");
+			fullValue = "/bahan-makanan/" + dashedValue;
+			$('#search-result').append('<a href="' + fullValue +  '" class="search-output"><li class="search-output">' + value + '</li></a>');
+		});
+	});
+
+};
+
+var stopFoodSearch = function(){
+	$('.search.container').addClass('is-hidden');
+};
+
+var stopIngredientSearch = function(){
+	$('.search.container').addClass('is-hidden');
+}
 
 var tab = function(name){
 	switch(name){
