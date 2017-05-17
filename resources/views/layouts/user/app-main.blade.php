@@ -65,7 +65,10 @@
 				<div class="search-bar column">
 					<p class="search-input control">
 						<i class="in-box fa fa-search" aria-hidden="true"></i>
-					    <input id="provider-json" class="input" type="text" placeholder="cari makanan" >
+					    <input class="input" type="text" placeholder="cari makanan" id="search-food" onkeyup="foodSearch()">
+					    <ul class="search container is-hidden" id="search-result">
+					    </ul>
+
 					</p>
 				</div>
 				<div class="quick-access-button column">

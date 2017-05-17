@@ -1657,6 +1657,11 @@ blockquote .blockquote-footer {
   color: #05C6C6;
 }
 
+.food-container.image-is3by2.is-hidden-mobile {
+  width: auto;
+  margin: 0 auto;
+}
+
 form table tr td {
   color: black;
 }
@@ -1905,6 +1910,21 @@ li {
 }
 
 .search-input.control {
+  position: relative;
+}
+
+.search.container {
+  display: block;
+  position: absolute;
+  width: 95%;
+  z-index: 2;
+  background-color: wheat;
+  opacity: 0.9;
+  top: 33px;
+  left: -18px;
+}
+
+.search-bar.column {
   position: relative;
 }
 

@@ -55,6 +55,7 @@ mix.copy('resources/public', 'public', false);
 mix.copy('resources/assets/fonts', 'public/assets/fonts', false);   
 mix.copy('resources/assets/images/', 'public/assets/images', false);
 mix.copy('resources/assets/css/', 'public/assets/css', false);
+mix.copy('resources/assets/json/', 'public/assets/json', false);
 mix.copy('resources/templates', 'public/templates', false);
 
 //~= application js

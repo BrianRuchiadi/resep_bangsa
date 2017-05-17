@@ -59,10 +59,10 @@ class FoodController extends Controller
 		$userId = (Auth::user()) ? Auth::user()->id : null;
 		$userEmail = (Auth::user()) ? Auth::user()->email : $request->input('email');
 
-		$manis = (isset($request->input('rasa')['manis'])) ? 1 : 0;
-		$pahit = (isset($request->input('rasa')['pahit'])) ? 1 : 0;
-		$asam = (isset($request->input('rasa')['asam'])) ? 1 : 0;
-		$pedas = (isset($request->input('rasa')['pedas'])) ? 1 : 0;
+		$manis = (isset($request->input('rasa')['manis'])) ? 2 : 1;
+		$pahit = (isset($request->input('rasa')['pahit'])) ? 2 : 1;
+		$asam = (isset($request->input('rasa')['asam'])) ? 2 : 1;
+		$pedas = (isset($request->input('rasa')['pedas'])) ? 2 : 1;
 
 		$image = $request->file('food_picture');
 		$imageName = time() . '_' . strtolower($request->input('food_name')) . '.' . $image->getClientOriginalExtension();

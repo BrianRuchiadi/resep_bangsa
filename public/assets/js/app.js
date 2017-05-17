@@ -51,6 +51,40 @@ $(document).ready(function(){
 	$('#submit-food-voting').prop('disabled', true);
 });
 
+var foodSearch = function(){
+	var input = "/(" + $('#search-food').val() + ")/g";
+	var foodRegex = new RegExp($('#search-food').val(), "i");
+	var results = [];
+
+	$('.search.container.is-hidden').removeClass('is-hidden');
+
+	$.getJSON('/assets/json/makanan.json', function(data){
+		$.each(data, function(i, makanan) {
+		 	var search = foodRegex.test(makanan.name);
+
+		 	if(results.length < 6){
+		 		if(search){
+		 			results.push(makanan.name);
+		 		}
+		 	}
+
+		});
+
+		$('.search.container.is-hidden').addClass('is-hidden');
+
+		if(!results.length > 0){ return; }
+
+		$('.search-output').remove();
+		$('.search.container.is-hidden').removeClass('is-hidden');
+
+		results.forEach(function(value){
+			dashedValue = value.replace(" ", "-");
+			$('#search-result').append('<a href="' + dashedValue +  '" class="search-output"><li class="search-output">' + value + '</li></a>');
+		});
+	});
+
+};
+
 var tab = function(name){
 	switch(name){
 		case 'sejarah':

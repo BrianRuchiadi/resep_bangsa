@@ -221,6 +221,19 @@ li{
 .search-input.control{
 	position : relative;
 }
+.search.container{
+	display : block;
+	position : absolute;
+	width : 95%;
+	z-index : 2;
+	background-color : wheat;
+	opacity : 0.9;
+	top : 33px;
+	left : -18px;
+}
+.search-bar.column{
+	position : relative;
+}
 .page-index.column{
 	text-align: center;
 }
