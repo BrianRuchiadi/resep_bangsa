@@ -73,6 +73,13 @@ class FoodController extends Controller
 			$constraint->aspectRatio();
 		})->save($destinationPath . '/' . $imageName);
 
+
+		$publicPath = public_path('assets/images/food/');
+
+		$saveImage->resize(200, 300, function ($constraint) {
+			$constraint->aspectRatio();
+		})->save($publicPath . '/' . $imageName);
+
 		$overview_1 = ($request->input('overview_1')) ? $request->input('overview_1') : null;
 		$overview_2 = ($request->input('overview_2')) ? $request->input('overview_2') : null;
 

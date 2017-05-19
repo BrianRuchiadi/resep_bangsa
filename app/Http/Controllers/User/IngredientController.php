@@ -41,6 +41,12 @@ class IngredientController extends Controller
 			$constraint->aspectRatio();
 		})->save($destinationPath . '/' . $imageName);
 
+		$publicPath = public_path('assets/images/food/ingredients');
+
+		$saveImage->resize(200, 300, function ($constraint) {
+			$constraint->aspectRatio();
+		})->save($publicPath . '/' . $imageName);
+
 		$ingredient = Ingredient::create([
 			'name' => strtolower($request->input('ingredient_name')),
 			'picture' => 'assets/images/food/ingredients/' . $imageName,
