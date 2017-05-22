@@ -80,7 +80,7 @@
 	@if(Session::has('food-add-success'))
 		<script>
 		swal({
-		  title: 'Bahan Berhasil Ditambahkan!',
+		  title: 'Makanan Berhasil Ditambahkan!',
 		  text: '{{ Session::get("food-add-success") }}',
 		  timer: 2500
 		}).then(

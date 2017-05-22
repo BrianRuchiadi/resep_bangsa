@@ -116,6 +116,20 @@ class FoodController extends Controller
 			'table_id' => $food->id
 		]);
 
+		$foodJson = file(public_path('assets/json/makanan.json'));
+		$lastLine = count($foodJson) - 1;
+
+		foreach($foodJson as $lineNumber => &$lineContent){
+			if($lineNumber == $lastLine - 1){
+				str_replace("\n", ',', $lineContent);
+				$lineContent .= ',' . "\n" . '{"name" : "' . $request->input('food_name') . '"}';
+			}
+		}
+
+		$allContent = implode("", $foodJson);
+		file_put_contents(public_path('assets/json/makanan.json'), $allContent);
+		file_put_contents(resource_path('assets/json/makanan.json'), $allContent);
+
 		$request->session()->flash('food-add-success', 'makanan berhasil di tambahkan');
 		return redirect()->route('kontribusi-data-makanan');
 	}

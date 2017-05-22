@@ -15,7 +15,7 @@ use Auth;
 class IngredientController extends Controller
 {
 	public function createIngredient(Request $request)
-	{
+	{		
 		$this->validate($request,[
 			'email' => 'bail|required|email',
 			'ingredient_name' => 'bail|required|min:3|unique:t0401_ingredient,name',
@@ -62,6 +62,20 @@ class IngredientController extends Controller
 			'table_name' => 't0401_ingredient',
 			'table_id' => $ingredient->id
 		]);
+		
+		$ingredientJson = file(public_path('assets/json/bahan.json'));
+		$lastLine = count($ingredientJson) - 1;
+
+		foreach($ingredientJson as $lineNumber => &$lineContent){
+			if($lineNumber == $lastLine - 1){
+				str_replace("\n", ',', $lineContent);
+				$lineContent .= ',' . "\n" . '{"name" : "' . $request->input('ingredient_name') . '"}';
+			}
+		}
+
+		$allContent = implode("", $ingredientJson);
+		file_put_contents(public_path('assets/json/bahan.json'), $allContent);
+		file_put_contents(resource_path('assets/json/bahan.json'), $allContent);
 
 		$request->session()->flash('ingredient-add-success', 'bahan makanan berhasil di tambahkan');
 		return redirect()->route('kontribusi-bahan-makanan');
