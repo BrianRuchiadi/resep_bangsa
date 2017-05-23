@@ -128,6 +128,20 @@
 				</div>
 				
 				@yield('content')
+
+				<div class="navigation column is-narrow is-hidden-tablet">
+					<nav class="panel">
+						@foreach($allRegions as $region)
+						<a class="panel-block" href="{{ url('makanan/' . str_replace(" ","-",$region->name) .'') }}">
+							<span class="panel-icon">
+								<i class="fa fa-map"></i>
+							</span>
+							{{ $region->name }}
+						</a>
+						@endforeach
+						
+					</nav>
+				</div>
 			</div>
 		</div><!-- this is end of main-content column -->
 		<!-- start of footer -->
