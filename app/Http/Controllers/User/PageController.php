@@ -40,6 +40,8 @@ class PageController extends Controller
 
 		return view('user.pages.index', [
 			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount(),
 			'randomFood' => $randomFood,
 			'randomFoods' => $randomFoods,
 			'randomIngredient' => $randomIngredient,
@@ -56,6 +58,8 @@ class PageController extends Controller
 
 		return view('user.pages.food-index', [
 			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount(),
 			'foods' => $foods,
 			'reportTypes' => $reportTypes,
 			'foodExists' => $foodExists,
@@ -78,6 +82,8 @@ class PageController extends Controller
 
 		return view('user.pages.food-index', [
 			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount(),
 			'foods' => $foods,
 			'reportTypes' => $reportTypes,
 			'foodExists' => $foodExists,
@@ -94,6 +100,8 @@ class PageController extends Controller
 		
 		return view('user.pages.ingredient-index', [
 			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount(),
 			'ingredient' => $ingredient,
 			'reportTypes' => $reportTypes,
 			'ingredientExists' => $ingredientExists,
@@ -111,6 +119,8 @@ class PageController extends Controller
 
 		return view('user.pages.ingredient-index', [
 			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount(),
 			'ingredients' => $ingredients,
 			'reportTypes' => $reportTypes,
 			'ingredientExists' => $ingredientExists,
@@ -119,22 +129,34 @@ class PageController extends Controller
 	public function showMarketIndex()
 	{
 		return view('user.pages.market-index',[
-			'allRegions' => $this->allIndonesiaStates()]);
+			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount()
+		]);
 	}
 	public function showContactIndex()
 	{
 		return view('user.pages.contact-index',[
-			'allRegions' => $this->allIndonesiaStates()]);
+			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount()
+		]);
 	}
 	public function showCreateIngredientForm()
 	{
 		return view('user.pages.create-ingredient-form', [
-			'allRegions' => $this->allIndonesiaStates()]);
+			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount()
+		]);
 	}
 	public function showCreateRecipeForm()
 	{
 		return view('user.pages.create-recipe-form', [
-			'allRegions' => $this->allIndonesiaStates()]);
+			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount()
+		]);
 	}
 	public function showCreateFoodForm()
 	{
@@ -142,12 +164,18 @@ class PageController extends Controller
 		
 		return view('user.pages.create-food-form', [
 			'allRegions' => $this->allIndonesiaStates(),
-			'locations' => $indonesiaLocations]);
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount(),
+			'locations' => $indonesiaLocations
+		]);
 	}
 	public function showRequestFoodForm()
 	{
 		return view('user.pages.request-food-form',[
-			'allRegions' => $this->allIndonesiaStates()]);
+			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount()
+		]);
 	}
 
 	public function showFoodDetail($foodName)
@@ -177,6 +205,8 @@ class PageController extends Controller
 
 		return view('user.pages.food-detail', [
 			'allRegions' => $this->allIndonesiaStates(),
+			'foodCounts' => $this->getFoodCount(),
+			'ingredientCounts' => $this->getIngredientCount(),
 			'food' => $food,
 			'reportTypes' => $reportTypes,
 			'foodExists' => $foodExists,

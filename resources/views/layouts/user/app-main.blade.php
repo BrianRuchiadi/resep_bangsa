@@ -80,32 +80,38 @@
 					</p>
 				</div>
 				<div class="quick-access-button column">
-					<a href="{{ url('kontribusi/data-makanan') }}">
-					<button class="button is-primary">
-						<i class="fa fa-plus" aria-hidden="true"></i>
-						kontribusi data makanan
-					</button>
-					</a>
-					<!-- <a href="{{ url('kontribusi/resep') }}">
-					<button class="button is-success">
-						<i class="fa fa-plus" aria-hidden="true"></i>
-						kontribusi resep
-					</button>
-					</a> -->
-					<a href="{{ url('kontribusi/bahan-makanan') }}">
-					<button class="button is-warning">
-						<i class="fa fa-plus" aria-hidden="true"></i>
-						kontribusi bahan makanan
-					</button>
-					</a>
-					<a href="{{ url ('permintaan/data-makanan')}}">
-					<button class="button is-info">
-						<i class="fa fa-plus" aria-hidden="true"></i>
-						permintaan data makanan
-					</button>
-					</a>
+					<table class="quick-stats">
+						<tr>
+							<td>Total Data Makanan</td>
+							<td>{{ $foodCounts }}</td>
+							<td><a href="{{ url('kontribusi/data-makanan') }}">
+									<button class="button is-primary">
+											<i class="fa fa-plus" aria-hidden="true"></i>
+											kontribusi data makanan
+									</button>
+								</a></td>
+						</tr>
+						<tr>
+							<td>Total Bahan Makanan</td>
+							<td>{{ $ingredientCounts }} </td>
+							<td><a href="{{ url('kontribusi/bahan-makanan') }}">
+									<button class="button is-warning">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+										kontribusi bahan makanan
+									</button>
+								</a></td>
+						</tr>
+						<tr>
+							<td colspan="2"></td>
+							<td><a href="{{ url ('permintaan/data-makanan')}}">
+												<button class="button is-info">
+													<i class="fa fa-plus" aria-hidden="true"></i>
+													permintaan data makanan
+												</button>
+											</a></td>
+					</table>
 				</div> 
-
+				
 				@yield('content')
 			</div>
 		</div><!-- this is end of main-content column -->

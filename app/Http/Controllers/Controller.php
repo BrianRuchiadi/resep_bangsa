@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Location;
+use App\Models\Food;
+use App\Models\Ingredient;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -14,5 +16,13 @@ class Controller extends BaseController
 
     public function allIndonesiaStates(){
     	return Location::where('country_id' , 1)->get();
+    }
+
+    public function getFoodCount(){
+    	return Food::count();
+    }
+
+    public function getIngredientCount(){
+    	return Ingredient::count();
     }
 }

@@ -68,8 +68,7 @@ class IngredientController extends Controller
 
 		foreach($ingredientJson as $lineNumber => &$lineContent){
 			if($lineNumber == $lastLine - 1){
-				str_replace("\n", ',', $lineContent);
-				$lineContent .= ',' . "\n" . '{"name" : "' . $request->input('ingredient_name') . '"}';
+				$lineContent .= ', {"name" : "' . $request->input('ingredient_name') . '"}';
 			}
 		}
 

@@ -3,6 +3,7 @@
 	width : 100%;
 	padding : 0;
 	background-color : transparent;
+	margin-left : 2px;
 }
 .index-makanan-menu.column.is-9, .index-bahan-makanan-menu.column.is-9{
 	overflow-x : auto;
@@ -102,4 +103,9 @@
 	width : auto;
 	margin : 0 auto;
 }
-
+.part{
+	display : block;
+}
+.quick-stats tr td{
+	color : black;
+}
