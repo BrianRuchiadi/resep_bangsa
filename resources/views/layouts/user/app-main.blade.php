@@ -84,7 +84,7 @@
 						<tr>
 							<td>Total Data Makanan</td>
 							<td>{{ $foodCounts }}</td>
-							<td><a href="{{ url('kontribusi/data-makanan') }}">
+							<td class="is-hidden-mobile"><a href="{{ url('kontribusi/data-makanan') }}">
 									<button class="button is-primary">
 											<i class="fa fa-plus" aria-hidden="true"></i>
 											kontribusi data makanan
@@ -94,14 +94,14 @@
 						<tr>
 							<td>Total Bahan Makanan</td>
 							<td>{{ $ingredientCounts }} </td>
-							<td><a href="{{ url('kontribusi/bahan-makanan') }}">
+							<td class="is-hidden-mobile"><a href="{{ url('kontribusi/bahan-makanan') }}">
 									<button class="button is-warning">
 										<i class="fa fa-plus" aria-hidden="true"></i>
 										kontribusi bahan makanan
 									</button>
 								</a></td>
 						</tr>
-						<tr>
+						<tr class="is-hidden-mobile">
 							<td colspan="2"></td>
 							<td><a href="{{ url ('permintaan/data-makanan')}}">
 												<button class="button is-info">
@@ -109,8 +109,23 @@
 													permintaan data makanan
 												</button>
 											</a></td>
+						</tr>
 					</table>
 				</div> 
+				<div class="quick-access-button column is-hidden-tablet">
+					<a href="{{ url('kontribusi/data-makanan') }}">
+						<button class="button is-primary">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+							kontribusi data makanan
+						</button>
+					</a>
+					<a href="{{ url('kontribusi/bahan-makanan') }}">
+						<button class="button is-warning">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+							kontribusi bahan makanan
+						</button>
+					</a>
+				</div>
 				
 				@yield('content')
 			</div>
@@ -163,11 +178,10 @@
 		    <div class="footer-link column is-fullwidth"></div>
 		    <div class="footer-content column is-fullwidth"></div>
 		    <div class="footer-social-media column is-fullwidth has-text-centered">
-		    	<i class="fa fa-facebook"></i>
+		    	<a href="https://www.facebook.com/resepbangsa/"><i class="fa fa-facebook"></i></a>
 		    	<i class="fa fa-twitter"></i>
 		    	<i class="fa fa-instagram"></i>
 		    	<i class="fa fa-whatsapp"></i><br>
-		    	<a href="{{ url ('hubungi')}}">Contact Us</a>
 		    </div>
 		  </div>
 		</footer>
