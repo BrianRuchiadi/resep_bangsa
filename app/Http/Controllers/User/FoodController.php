@@ -121,7 +121,6 @@ class FoodController extends Controller
 
 		foreach($foodJson as $lineNumber => &$lineContent){
 			if($lineNumber == $lastLine - 1){
-				str_replace("\n", ',', $lineContent);
 				$lineContent .= ', {"name" : "' . $request->input('food_name') . '"}';
 			}
 		}
