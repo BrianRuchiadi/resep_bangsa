@@ -24,4 +24,11 @@ Route::group(['prefix' => '', 'namespace' => 'User'], function () {
 	Route::post('/laporan/bahan-makanan', 'ReportController@submitIngredientReport');
 	Route::post('/inquiry', 'InquiryController@submitInquiry');
 
+	Route::get('/beta', 'PageController@index2');
+	Route::get('/beta/makanan', 'PageController@showFoodIndex2');
+	Route::get('/beta/bahan-makanan', 'PageController@showIngredientIndex2');
+	Route::get('/beta/tips-tips-memasak', 'PageController@showTipsMemasak2');
+	Route::get('/beta/resep', 'PageController@showResep2');
+	Route::get('/beta/profile', 'PageController@showProfile2');
+
 });

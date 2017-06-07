@@ -47,6 +47,11 @@ class PageController extends Controller
 			'randomIngredient' => $randomIngredient,
 			'randomIngredients' => $randomIngredients]);
 	}
+	public function index2()
+	{
+		return view('user.pages.index2');
+	}
+
 	public function showFoodIndex()
 	{
 		$foods = Food::where('deleted_at', null)->
@@ -64,6 +69,26 @@ class PageController extends Controller
 			'reportTypes' => $reportTypes,
 			'foodExists' => $foodExists,
 			'locationExists' => $locationExists]);
+	}
+
+	public function showFoodIndex2()
+	{
+		return view('user.pages.food-index2');
+	}
+
+	public function showTipsMemasak2()
+	{
+		return view('user.pages.tips-tips-memasak2');
+	}
+
+	public function showResep2()
+	{
+		return view('user.pages.resep2');
+	}
+
+	public function showProfile2()
+	{
+		return view('user.pages.profile2');
 	}
 
 	public function showFoodByRegionName($regionName)
@@ -125,6 +150,11 @@ class PageController extends Controller
 			'reportTypes' => $reportTypes,
 			'ingredientExists' => $ingredientExists,
 			'type' => $type]);
+	}
+
+	public function showIngredientIndex2()
+	{
+		return view('user.pages.ingredient-index2');
 	}
 	public function showMarketIndex()
 	{
