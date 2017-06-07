@@ -783,7 +783,6 @@
 			padding : 0;
 			height : 200px;
 			width: 100%;
-			border-bottom : 1px solid grey;
 		}
 		.timeline.content.column{
 			padding : 0;
@@ -792,7 +791,7 @@
 			width : 90%;
 			display: block;
 			margin : 10px 5%;
-			background-color: red;
+			border : 1px solid grey;
 		}
 		.timeline.content.column h1{
 			margin : 0;
@@ -801,19 +800,85 @@
 			text-align: center;
 			background-color : wheat;
 		}
-		.timeline.news-header.column.is-200{
+		.timeline.news-header.column.is-150{
 			display : inline-block;
-			width : 200px;
+			width : 150px;
 			height : calc(100% - 36px);
-			background-color: blue;
+			vertical-align: top;
 		}
 
-		.timeline.news-header.column.is-200 img{
+		.timeline.news-header.column.is-150 img{
 			object-fit: cover;
 			object-position: center;
 			height : calc(100% - 10px);
+			width : 130px;
 			margin-top : 5px;
+			border : 2px solid grey;
 			padding : 0;
+		}
+		.posted.button.is-info{
+			position : absolute;
+			font-size : 12px;
+			top : 0;
+			left : 10px;
+		}
+		.posted.button.is-earned{
+			margin : 5px;
+			position : absolute;
+			font-size: 14px;
+			top : 0;
+			right : 10px;
+			font-family : 'open Sans Condensed', sans-serif;
+		}
+		.posted.button.is-earned i.fa.fa-circle{
+			color : #FFC931;
+		}
+		.timeline.news-summary{
+			display: inline-block;
+			width : calc(100% - 150px);
+			height : calc(100% - 36px);
+			padding : 10px;
+		}
+		.timeline.news-summary h1{
+			background-color: transparent !important;
+		}
+		.timeline.news-summary p{
+			padding-left : 20px;
+			height : 60px;
+			font-family : 'open Sans Condensed', sans-serif;
+			overflow-y: scroll;
+		}
+		button.more.button.is-info{
+			position: absolute;
+			right : 10px;
+			bottom : 0;
+			font-size : 12px;
+			background-color: #FFC931;
+			color : black;
+		}
+		button.more.button.is-info i.fa.fa-newspaper-o{
+			font-size : 14px;
+			color : #104A50;
+		}
+		button.time.button.is-info{
+			position : absolute;
+			right : 110px;
+			bottom : 0;
+			font-size: 12px;
+			background-color: #FFC931;
+			color : black;
+		}
+		button.time.button.is-info i.fa.fa-clock-o{
+			font-size : 14px;
+			color : black;
+		}
+		i.scroll.fa.fa-arrows-v{
+			position: absolute;
+			bottom : 50px;
+			border-radius: 50%;
+			background-color: #FFC931;
+			padding : 5px;
+			left : 150px;
 		}
     </style>
 
